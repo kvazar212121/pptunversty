@@ -1,0 +1,166 @@
+/* ===== GLASSMORPHISM — barcha shaffof panellar (xiralashgan) ===== */
+
+.feature-chip,
+.tier-card,
+.stat-card,
+.problem-card,
+.flow-item,
+.strategy-banner,
+.mgmt-node-card,
+.campus-card,
+.ai-card,
+.learning-card,
+.dir-card,
+.eco-node,
+.eco-chip,
+.eco-warning,
+.didox-card,
+.didox-chip,
+.didox-step,
+.fnd-highlight,
+.fnd-compare-card,
+.fnd-module,
+.fnd-chip,
+.roles-banner-wrap,
+.roles-legend-item,
+.role-card,
+.arch-node,
+.arch-stack,
+.arch-badge,
+.kredit-card,
+.life-card,
+.life-chip,
+.pay-card,
+.pay-chip,
+.pay-float,
+.sec-card,
+.sec-chip,
+.tech-card,
+.roadmap-card,
+.roi-card,
+.roi-chip,
+.result-card,
+.team-group,
+.team-stat-item,
+.demo-feat-chip,
+.hub-sat {
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  background: var(--glass-bg) !important;
+  border-color: var(--glass-border) !important;
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+}
+
+/* Yumshoqroq fon — kichik elementlar */
+.pay-float,
+.eco-chip,
+.roi-chip,
+.sec-chip,
+.life-chip,
+.didox-chip,
+.demo-feat-chip,
+.arch-badge,
+.finale-tags span {
+  background: var(--glass-bg-soft) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(var(--glass-saturate));
+  backdrop-filter: blur(14px) saturate(var(--glass-saturate));
+}
+
+/* Maxsus gradientli panellar — fon saqlanadi, faqat blur */
+.arch-node-api,
+.arch-node-core,
+.mgmt-node-card {
+  background: unset !important;
+}
+
+.arch-node-api {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.2),
+    rgba(99, 102, 241, 0.14)
+  ) !important;
+}
+
+.arch-node-core {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.38),
+    rgba(139, 92, 246, 0.22)
+  ) !important;
+}
+
+.mgmt-node-card {
+  background: rgba(15, 35, 70, 0.55) !important;
+}
+
+/* Telefon ichidagi elementlar — alohida */
+.pay-screen,
+.pay-phone-inner,
+.demo-phone .screen,
+.app-item,
+.app-header {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.pay-screen {
+  background: linear-gradient(180deg, #0f2848 0%, #0a1e3a 55%, #081830 100%) !important;
+  box-shadow: none !important;
+}
+
+.pay-phone .pay-debt-box,
+.pay-phone .pay-screen-btn,
+.pay-phone .pay-screen-note {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+.pay-phone .pay-debt-box {
+  background: linear-gradient(
+    145deg,
+    rgba(16, 185, 129, 0.22),
+    rgba(8, 30, 58, 0.75)
+  ) !important;
+}
+
+.pay-phone .pay-screen-btn.payme-btn {
+  background: rgba(0, 212, 170, 0.12) !important;
+}
+
+.pay-phone .pay-screen-btn.click-btn {
+  background: rgba(59, 130, 246, 0.12) !important;
+}
+
+.pay-phone .pay-screen-note {
+  background: rgba(139, 92, 246, 0.12) !important;
+}
+
+/* Icon konteynerlar — rangli fon saqlansin */
+[class*="-card-icon"]:not(.pay-card-icon),
+.p-icon,
+.mgmt-node-icon,
+.campus-card-icon,
+.ai-card-icon,
+.role-icon,
+.dir-icon,
+.eco-dot,
+.tech-card-icon,
+.sec-card-icon,
+.result-card-icon,
+.roi-card-icon,
+.kredit-card-icon,
+.life-card-icon,
+.didox-card-icon,
+.didox-step-icon,
+.pay-card-icon {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Provider tugmalari */
+.pay-provider {
+  -webkit-backdrop-filter: blur(12px) saturate(1.3);
+  backdrop-filter: blur(12px) saturate(1.3);
+}

@@ -1,0 +1,256 @@
+/* ===== SLIDE 8 — SMART LEARNING ===== */
+.slide-learning {
+  overflow: hidden;
+  justify-content: center;
+  padding: 26px clamp(16px, 2.5vw, 40px) 44px;
+}
+
+.learning-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.learning-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.learning-orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.22), transparent 70%);
+  top: -5%;
+  left: 12%;
+  animation: learningOrbFloat 14s ease-in-out infinite;
+}
+
+.learning-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.16), transparent 70%);
+  bottom: 8%;
+  right: 10%;
+  animation: learningOrbFloat 14s ease-in-out infinite reverse;
+}
+
+.learning-orb-3 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.14), transparent 70%);
+  top: 45%;
+  right: 35%;
+  animation: learningOrbFloat 11s ease-in-out infinite 3s;
+}
+
+@keyframes learningOrbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(12px, -10px) scale(1.04); }
+}
+
+.learning-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.learning-label .label-icon {
+  width: 22px;
+  height: 22px;
+  color: #6ee7b7;
+}
+
+.slide-learning .slide-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4.5vw, 54px);
+}
+
+.learning-intro {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 14px;
+  max-width: 720px;
+}
+
+.learning-intro strong {
+  color: #a7f3d0;
+  font-weight: 600;
+}
+
+.learning-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.learning-tags span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(167, 243, 208, 0.95);
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: min(96vw, 1480px);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.learning-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  min-height: 72px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  border-left: 3px solid rgba(110, 231, 183, 0.65);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.learning-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.06) 50%, transparent 60%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+
+.learning-card:hover::after {
+  transform: translateX(120%);
+}
+
+.slide-learning.active .learning-card {
+  animation: learningCardIn 0.5s ease forwards;
+}
+
+.slide-learning.active .learning-card:nth-child(1) { animation-delay: 0.03s; }
+.slide-learning.active .learning-card:nth-child(2) { animation-delay: 0.06s; }
+.slide-learning.active .learning-card:nth-child(3) { animation-delay: 0.09s; }
+.slide-learning.active .learning-card:nth-child(4) { animation-delay: 0.12s; }
+.slide-learning.active .learning-card:nth-child(5) { animation-delay: 0.15s; }
+.slide-learning.active .learning-card:nth-child(6) { animation-delay: 0.18s; }
+.slide-learning.active .learning-card:nth-child(7) { animation-delay: 0.21s; }
+.slide-learning.active .learning-card:nth-child(8) { animation-delay: 0.24s; }
+.slide-learning.active .learning-card:nth-child(9) { animation-delay: 0.27s; }
+.slide-learning.active .learning-card:nth-child(10) { animation-delay: 0.3s; }
+.slide-learning.active .learning-card:nth-child(11) { animation-delay: 0.33s; }
+.slide-learning.active .learning-card:nth-child(12) { animation-delay: 0.36s; }
+.slide-learning.active .learning-card:nth-child(13) { animation-delay: 0.39s; }
+.slide-learning.active .learning-card:nth-child(14) { animation-delay: 0.42s; }
+.slide-learning.active .learning-card:nth-child(15) { animation-delay: 0.45s; }
+.slide-learning.active .learning-card:nth-child(16) { animation-delay: 0.48s; }
+
+@keyframes learningCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.learning-card:hover {
+  transform: translateY(-4px);
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(110, 231, 183, 0.5);
+  box-shadow: 0 14px 36px rgba(16, 185, 129, 0.18);
+}
+
+.learning-card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.28), rgba(45, 212, 191, 0.12));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6ee7b7;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.learning-card:hover .learning-card-icon {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.35);
+}
+
+.learning-card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.learning-card-icon-accent {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.15));
+  color: #c4b5fd;
+}
+
+.learning-card span {
+  font-size: clamp(13px, 1.2vw, 15px);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.96);
+  line-height: 1.35;
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: min(92vw, 900px);
+    gap: 14px;
+  }
+
+  .learning-card {
+    min-height: 68px;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .learning-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .learning-tags span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .slide-learning .slide-title {
+    font-size: clamp(26px, 7vw, 34px);
+    margin-bottom: 8px;
+  }
+}

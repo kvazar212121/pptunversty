@@ -1,0 +1,580 @@
+/* ===== SLIDE 12 — ARXITEKTURA ===== */
+.slide-arch {
+  overflow: hidden;
+  justify-content: flex-start;
+  padding: 18px 8px 24px clamp(10px, 1.5vw, 24px);
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.arch-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.arch-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+}
+
+.arch-orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25), transparent 70%);
+  top: 0;
+  left: 20%;
+  animation: archOrb 15s ease-in-out infinite;
+}
+
+.arch-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.15), transparent 70%);
+  bottom: 5%;
+  right: 15%;
+  animation: archOrb 15s ease-in-out infinite reverse;
+}
+
+@keyframes archOrb {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(12px, -10px); }
+}
+
+.arch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.arch-label .label-icon {
+  width: 22px;
+  height: 22px;
+  color: #fdba74;
+}
+
+.slide-arch .slide-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 6px;
+  font-size: clamp(26px, 3.8vw, 46px);
+}
+
+.arch-intro {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 12px;
+  max-width: 900px;
+}
+
+.arch-intro strong {
+  color: #c4b5fd;
+}
+
+.arch-main {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) min(720px, 46vw);
+  align-items: stretch;
+  gap: clamp(14px, 1.8vw, 24px);
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.arch-diagram {
+  position: relative;
+  min-width: 0;
+  max-width: 100%;
+  min-height: min(46vh, 380px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  margin: 0;
+  overflow: visible;
+}
+
+.arch-video-wrap {
+  width: 100%;
+  max-width: 720px;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+
+.slide-arch.active .arch-video-wrap {
+  animation: archNodeIn 0.55s ease 0.5s forwards;
+}
+
+.arch-banner-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(44vh, 400px);
+  object-fit: contain;
+  object-position: center;
+  background: #0a1628;
+}
+
+.arch-layer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: min(44vh, 360px);
+  max-width: 162px;
+}
+
+.arch-layer-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.arch-row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.arch-layer-client,
+.arch-layer-svc {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  padding: 12px 10px 14px;
+}
+
+.arch-layer-client .arch-row,
+.arch-layer-svc .arch-row {
+  width: 100%;
+  max-width: 158px;
+}
+
+.arch-layer-client .arch-node,
+.arch-layer-svc .arch-node {
+  padding: 12px 12px;
+  gap: 7px;
+}
+
+.arch-layer-client .arch-node-icon,
+.arch-layer-svc .arch-node-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+}
+
+.arch-layer-client .arch-node-icon svg,
+.arch-layer-svc .arch-node-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.arch-layer-client .arch-node-label,
+.arch-layer-svc .arch-node-label {
+  font-size: 11px;
+}
+
+.arch-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  width: 100%;
+  min-width: 0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+}
+
+.slide-arch.active .arch-node {
+  animation: archNodeIn 0.5s ease forwards;
+}
+
+.slide-arch.active .arch-layer-client .arch-node:nth-child(1) { animation-delay: 0.05s; }
+.slide-arch.active .arch-layer-client .arch-node:nth-child(2) { animation-delay: 0.1s; }
+.slide-arch.active .arch-layer-client .arch-node:nth-child(3) { animation-delay: 0.15s; }
+.slide-arch.active .arch-layer-api .arch-node { animation-delay: 0.22s; }
+.slide-arch.active .arch-core .arch-node-core { animation-delay: 0.32s; }
+.slide-arch.active .arch-layer-svc .arch-node:nth-child(1) { animation-delay: 0.42s; }
+.slide-arch.active .arch-layer-svc .arch-node:nth-child(2) { animation-delay: 0.48s; }
+.slide-arch.active .arch-layer-svc .arch-node:nth-child(3) { animation-delay: 0.54s; }
+.slide-arch.active .arch-layer-svc .arch-node:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes archNodeIn {
+  from { opacity: 0; transform: translateX(-14px) scale(0.96); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.arch-node:hover {
+  transform: translateX(3px) scale(1.04);
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.2);
+}
+
+.arch-node-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+}
+
+.arch-node-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.arch-node-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  line-height: 1.25;
+}
+
+.arch-connector {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 3px;
+  min-height: 3px;
+  align-self: center;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.6), rgba(139, 92, 246, 0.15));
+  position: relative;
+  opacity: 0;
+  margin: 0;
+}
+
+.slide-arch.active .arch-connector {
+  animation: archConnIn 0.45s ease forwards;
+}
+
+.arch-diagram > .arch-connector:nth-of-type(2) { animation-delay: 0.18s; }
+.arch-diagram > .arch-connector:nth-of-type(4) { animation-delay: 0.28s; }
+.arch-diagram > .arch-connector:nth-of-type(6) { animation-delay: 0.38s; }
+
+@keyframes archConnIn {
+  from { opacity: 0; width: 0; }
+  to { opacity: 1; width: 16px; }
+}
+
+.arch-connector::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid rgba(139, 92, 246, 0.55);
+}
+
+.arch-node-api .arch-node-label {
+  font-size: 11px;
+}
+
+.arch-node-api {
+  width: 100%;
+  max-width: 155px;
+  min-width: 128px;
+  padding: 16px 12px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(99, 102, 241, 0.12));
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.arch-node-api .arch-node-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(56, 189, 248, 0.25);
+  color: #7dd3fc;
+}
+
+.arch-core {
+  position: relative;
+  padding: 0 2px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-height: min(44vh, 360px);
+  max-width: 165px;
+  justify-content: center;
+}
+
+.arch-node-core {
+  width: 100%;
+  max-width: 162px;
+  min-width: 138px;
+  padding: 20px 14px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.35), rgba(139, 92, 246, 0.2));
+  border: 2px solid rgba(167, 139, 250, 0.55);
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.35), inset 0 0 30px rgba(139, 92, 246, 0.1);
+}
+
+.arch-node-core .arch-node-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(139, 92, 246, 0.35);
+  color: #e9d5ff;
+}
+
+.arch-node-core .arch-node-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.arch-node-core .arch-node-label {
+  font-size: 14px;
+  color: #e9d5ff;
+}
+
+.arch-node-core::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 22px;
+  border: 1px dashed rgba(167, 139, 250, 0.25);
+  animation: archCoreRing 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes archCoreRing {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.arch-layer-svc .arch-node-icon {
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+.arch-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: auto;
+  padding: 16px clamp(20px, 4vw, 48px);
+  width: min(98%, 1400px);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+.slide-arch.active .arch-stack {
+  animation: archNodeIn 0.5s ease 0.7s forwards;
+}
+
+.arch-stack span {
+  font-size: clamp(11px, 1.2vw, 13px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4px 0;
+}
+
+.arch-stack span:not(:last-child)::after {
+  content: '•';
+  margin-left: 10px;
+  color: rgba(139, 92, 246, 0.6);
+}
+
+.arch-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 12px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+.slide-arch.active .arch-badges {
+  animation: archNodeIn 0.5s ease 0.85s forwards;
+}
+
+.arch-badge {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.arch-layer-api {
+  flex: 0 0 auto;
+  max-width: 162px;
+  background: rgba(56, 189, 248, 0.04);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 18px;
+  padding: 12px 10px;
+}
+
+.arch-badge-secure {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.arch-badge-scale {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.arch-badge-realtime {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+@media (max-width: 1280px) {
+  .arch-main {
+    grid-template-columns: 1fr;
+  }
+
+  .arch-video-wrap {
+    width: 100%;
+    max-width: min(94vw, 720px);
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .arch-banner-video {
+    max-height: min(40vh, 380px);
+  }
+
+  .arch-diagram {
+    flex: 0 0 auto;
+    flex-direction: column;
+    max-height: none;
+    width: min(94vw, 520px);
+  }
+
+  .arch-layer {
+    min-height: auto;
+    width: 100%;
+  }
+
+  .arch-core {
+    min-height: auto;
+  }
+
+  .arch-layer-client .arch-row,
+  .arch-layer-svc .arch-row {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .arch-node {
+    width: auto;
+    min-width: 100px;
+    flex: 0 1 auto;
+  }
+
+  .arch-node-api,
+  .arch-node-core {
+    width: auto;
+    min-width: 180px;
+  }
+
+  .arch-connector {
+    width: 2px;
+    height: 22px;
+    margin: 4px 0;
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.55), rgba(139, 92, 246, 0.12));
+  }
+
+  .arch-connector::after {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -5px;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid rgba(139, 92, 246, 0.55);
+    border-bottom: none;
+  }
+
+  @keyframes archConnIn {
+    from { opacity: 0; height: 0; width: 2px; }
+    to { opacity: 1; height: 22px; width: 2px; }
+  }
+
+  @keyframes archNodeIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .arch-node:hover {
+    transform: translateY(-3px) scale(1.04);
+  }
+}
+
+@media (max-width: 600px) {
+  .arch-stack {
+    border-radius: 16px;
+    padding: 12px 16px;
+  }
+
+  .arch-stack span:not(:last-child)::after {
+    display: none;
+  }
+
+  .arch-stack {
+    gap: 8px;
+  }
+}

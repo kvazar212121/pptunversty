@@ -1,0 +1,373 @@
+/* ===== SLIDE 9 — STRATEGIK YECHIMLAR ===== */
+.slide-directions {
+  overflow: hidden;
+  justify-content: center;
+  padding: 28px clamp(16px, 2.5vw, 40px) 48px;
+}
+
+.dir-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dir-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+}
+
+.dir-orb-1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.2), transparent 70%);
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dirOrbPulse 16s ease-in-out infinite;
+}
+
+.dir-orb-2 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.12), transparent 70%);
+  bottom: 0;
+  left: 5%;
+  animation: dirOrbPulse 16s ease-in-out infinite 4s;
+}
+
+.dir-orb-3 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.12), transparent 70%);
+  bottom: 5%;
+  right: 8%;
+  animation: dirOrbPulse 16s ease-in-out infinite 8s;
+}
+
+@keyframes dirOrbPulse {
+  0%, 100% { opacity: 0.85; transform: translateX(-50%) scale(1); }
+  50% { opacity: 1; transform: translateX(-50%) scale(1.06); }
+}
+
+.dir-orb-2,
+.dir-orb-3 {
+  animation-name: dirOrbFloat;
+}
+
+@keyframes dirOrbFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10px, -8px) scale(1.05); }
+}
+
+.dir-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.dir-label .label-icon {
+  width: 22px;
+  height: 22px;
+  color: #c4b5fd;
+}
+
+.slide-directions .slide-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4.5vw, 54px);
+}
+
+.dir-intro {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 28px;
+  max-width: 680px;
+}
+
+.dir-intro strong {
+  color: #e9d5ff;
+  font-weight: 600;
+}
+
+.dir-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: min(96vw, 1320px);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.dir-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 22px 28px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  opacity: 0;
+  border: 1px solid transparent;
+}
+
+.dir-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.dir-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.dir-card:hover::after {
+  transform: scaleX(1);
+}
+
+.slide-directions.active .dir-card {
+  animation: dirCardIn 0.55s ease forwards;
+}
+
+.slide-directions.active .dir-card:nth-child(1) { animation-delay: 0.08s; }
+.slide-directions.active .dir-card:nth-child(2) { animation-delay: 0.16s; }
+.slide-directions.active .dir-card:nth-child(3) { animation-delay: 0.24s; }
+.slide-directions.active .dir-card:nth-child(4) { animation-delay: 0.32s; }
+
+@keyframes dirCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.dir-num {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+}
+
+.dir-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dir-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.dir-card:hover .dir-icon {
+  transform: scale(1.1) translateY(-4px);
+}
+
+.dir-title {
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 800;
+  margin: 0 0 10px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.dir-desc {
+  font-size: clamp(12px, 1.1vw, 13px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.62);
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 1;
+  max-width: 240px;
+}
+
+.dir-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dir-pills li {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Theme: Learning */
+.dir-card-1 {
+  background: linear-gradient(160deg, rgba(99, 102, 241, 0.22), rgba(139, 92, 246, 0.08));
+  border-color: rgba(129, 140, 248, 0.4);
+}
+
+.dir-card-1 .dir-icon {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.45), rgba(139, 92, 246, 0.2));
+  color: #c4b5fd;
+}
+
+.dir-card-1::after {
+  background: linear-gradient(90deg, transparent, #818cf8, transparent);
+}
+
+.dir-card-1:hover {
+  box-shadow: 0 24px 48px rgba(99, 102, 241, 0.25);
+  border-color: rgba(165, 180, 252, 0.55);
+}
+
+/* Theme: Management */
+.dir-card-2 {
+  background: linear-gradient(160deg, rgba(34, 197, 94, 0.2), rgba(74, 222, 128, 0.06));
+  border-color: rgba(52, 211, 153, 0.38);
+}
+
+.dir-card-2 .dir-icon {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.4), rgba(74, 222, 128, 0.15));
+  color: #6ee7b7;
+}
+
+.dir-card-2::after {
+  background: linear-gradient(90deg, transparent, #34d399, transparent);
+}
+
+.dir-card-2:hover {
+  box-shadow: 0 24px 48px rgba(34, 197, 94, 0.22);
+  border-color: rgba(110, 231, 183, 0.5);
+}
+
+/* Theme: Campus */
+.dir-card-3 {
+  background: linear-gradient(160deg, rgba(59, 130, 246, 0.22), rgba(96, 165, 250, 0.08));
+  border-color: rgba(96, 165, 250, 0.38);
+}
+
+.dir-card-3 .dir-icon {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.42), rgba(96, 165, 250, 0.15));
+  color: #93c5fd;
+}
+
+.dir-card-3::after {
+  background: linear-gradient(90deg, transparent, #60a5fa, transparent);
+}
+
+.dir-card-3:hover {
+  box-shadow: 0 24px 48px rgba(59, 130, 246, 0.22);
+  border-color: rgba(147, 197, 253, 0.5);
+}
+
+/* Theme: AI */
+.dir-card-4 {
+  background: linear-gradient(160deg, rgba(244, 114, 182, 0.2), rgba(251, 146, 60, 0.08));
+  border-color: rgba(244, 114, 182, 0.38);
+}
+
+.dir-card-4 .dir-icon {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.4), rgba(251, 146, 60, 0.15));
+  color: #f9a8d4;
+}
+
+.dir-card-4::after {
+  background: linear-gradient(90deg, transparent, #f472b6, transparent);
+}
+
+.dir-card-4:hover {
+  box-shadow: 0 24px 48px rgba(244, 114, 182, 0.22);
+  border-color: rgba(249, 168, 212, 0.5);
+}
+
+.dir-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.dir-connector {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.25), rgba(52, 211, 153, 0.25), rgba(96, 165, 250, 0.25), rgba(244, 114, 182, 0.25), transparent);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease 0.4s;
+}
+
+.slide-directions.active .dir-connector {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .dir-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+
+  .dir-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .dir-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .dir-card {
+    padding: 26px 20px 24px;
+  }
+
+  .slide-directions .slide-title {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .dir-intro {
+    margin-bottom: 20px;
+  }
+}

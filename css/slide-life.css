@@ -1,0 +1,413 @@
+/* ===== SLIDE 14 — TALABA HAYOTI ===== */
+.slide-life {
+  overflow: hidden;
+  justify-content: center;
+  padding: 26px clamp(16px, 2.5vw, 40px) 44px;
+}
+
+.life-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.life-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+}
+
+.life-orb-1 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.2), transparent 70%);
+  top: -8%;
+  right: 12%;
+  animation: lifeOrb 14s ease-in-out infinite;
+}
+
+.life-orb-2 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.16), transparent 70%);
+  bottom: 5%;
+  left: 8%;
+  animation: lifeOrb 14s ease-in-out infinite reverse;
+}
+
+.life-orb-3 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.14), transparent 70%);
+  top: 45%;
+  left: 40%;
+  animation: lifeOrb 11s ease-in-out infinite 2s;
+}
+
+@keyframes lifeOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10px, -8px) scale(1.04); }
+}
+
+.life-float {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  animation: lifeFloat 5s ease-in-out infinite;
+}
+
+.life-float-1 {
+  top: 20%;
+  left: 7%;
+  color: #93c5fd;
+  animation-delay: 0s;
+}
+
+.life-float-2 {
+  top: 24%;
+  right: 8%;
+  color: #f9a8d4;
+  animation-delay: 1.2s;
+}
+
+.life-float-3 {
+  bottom: 30%;
+  left: 10%;
+  color: #6ee7b7;
+  animation-delay: 2.4s;
+}
+
+@keyframes lifeFloat {
+  0%, 100% { transform: translateY(0); opacity: 0.75; }
+  50% { transform: translateY(-8px); opacity: 1; }
+}
+
+.life-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.life-label .label-icon {
+  width: 22px;
+  height: 22px;
+  color: #f9a8d4;
+}
+
+.slide-life .slide-title {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  font-size: clamp(30px, 4.5vw, 54px);
+}
+
+.life-intro {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 14px;
+  max-width: 680px;
+}
+
+.life-intro strong {
+  color: #fbcfe8;
+  font-weight: 600;
+}
+
+.life-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.life-tags span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(251, 207, 232, 0.95);
+  background: rgba(244, 114, 182, 0.12);
+  border: 1px solid rgba(244, 114, 182, 0.35);
+}
+
+.life-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: min(96vw, 1180px);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.life-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 22px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  opacity: 0;
+}
+
+.life-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 42%, rgba(255, 255, 255, 0.07) 50%, transparent 58%);
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+
+.life-card:hover::after {
+  transform: translateX(120%);
+}
+
+.slide-life.active .life-card {
+  animation: lifeCardIn 0.5s ease forwards;
+}
+
+.slide-life.active .life-card:nth-child(1) { animation-delay: 0.06s; }
+.slide-life.active .life-card:nth-child(2) { animation-delay: 0.12s; }
+.slide-life.active .life-card:nth-child(3) { animation-delay: 0.18s; }
+.slide-life.active .life-card:nth-child(4) { animation-delay: 0.24s; }
+.slide-life.active .life-card:nth-child(5) { animation-delay: 0.3s; }
+.slide-life.active .life-card:nth-child(6) { animation-delay: 0.36s; }
+
+@keyframes lifeCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.life-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.life-card-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.life-card:hover .life-card-icon {
+  transform: scale(1.1) translateY(-4px);
+}
+
+.life-card-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.life-card-name {
+  font-size: clamp(17px, 1.5vw, 19px);
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.life-card-desc {
+  font-size: clamp(12px, 1.1vw, 13px);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.58);
+  margin: 0 0 14px;
+}
+
+.life-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.life-pills li {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* Card themes */
+.life-card-1 {
+  border-top: 3px solid rgba(59, 130, 246, 0.6);
+}
+
+.life-card-1 .life-card-icon {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.35), rgba(96, 165, 250, 0.15));
+  color: #93c5fd;
+}
+
+.life-card-1:hover {
+  box-shadow: 0 18px 40px rgba(59, 130, 246, 0.22);
+  border-color: rgba(147, 197, 253, 0.4);
+}
+
+.life-card-2 {
+  border-top: 3px solid rgba(251, 146, 60, 0.6);
+}
+
+.life-card-2 .life-card-icon {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.35), rgba(245, 158, 11, 0.15));
+  color: #fdba74;
+}
+
+.life-card-2:hover {
+  box-shadow: 0 18px 40px rgba(251, 146, 60, 0.2);
+}
+
+.life-card-3 {
+  border-top: 3px solid rgba(34, 197, 94, 0.6);
+}
+
+.life-card-3 .life-card-icon {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.35), rgba(74, 222, 128, 0.15));
+  color: #6ee7b7;
+}
+
+.life-card-3:hover {
+  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.2);
+}
+
+.life-card-4 {
+  border-top: 3px solid rgba(167, 139, 250, 0.6);
+}
+
+.life-card-4 .life-card-icon {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(99, 102, 241, 0.15));
+  color: #c4b5fd;
+}
+
+.life-card-4:hover {
+  box-shadow: 0 18px 40px rgba(139, 92, 246, 0.2);
+}
+
+.life-card-5 {
+  border-top: 3px solid rgba(250, 204, 21, 0.6);
+}
+
+.life-card-5 .life-card-icon {
+  background: linear-gradient(135deg, rgba(250, 204, 21, 0.35), rgba(245, 158, 11, 0.15));
+  color: #fde047;
+}
+
+.life-card-5:hover {
+  box-shadow: 0 18px 40px rgba(250, 204, 21, 0.18);
+}
+
+.life-card-6 {
+  border-top: 3px solid rgba(244, 114, 182, 0.6);
+}
+
+.life-card-6 .life-card-icon {
+  background: linear-gradient(135deg, rgba(244, 114, 182, 0.35), rgba(236, 72, 153, 0.15));
+  color: #f9a8d4;
+}
+
+.life-card-6:hover {
+  box-shadow: 0 18px 40px rgba(244, 114, 182, 0.2);
+}
+
+.life-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+.slide-life.active .life-footer {
+  animation: lifeCardIn 0.5s ease 0.45s forwards;
+}
+
+.life-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.life-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(244, 114, 182, 0.4);
+}
+
+.life-chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 10px #4ade80;
+  animation: lifeDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes lifeDotPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@media (max-width: 1000px) {
+  .life-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+  }
+
+  .life-float {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .life-grid {
+    grid-template-columns: 1fr;
+  }
+}
