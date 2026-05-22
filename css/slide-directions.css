@@ -112,9 +112,9 @@
 .dir-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
-  padding: 32px 22px 28px;
+  padding: 0;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -129,6 +129,7 @@
   inset: 0;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.06) 0%, transparent 55%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .dir-card::after {
@@ -141,6 +142,7 @@
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.4s ease;
+  z-index: 1;
 }
 
 .dir-card:hover::after {
@@ -169,12 +171,49 @@
 
 .dir-num {
   position: absolute;
-  top: 14px;
-  right: 16px;
+  top: 12px;
+  right: 12px;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.1em;
-  opacity: 0.45;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.45);
+  padding: 4px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dir-card-img-wrapper {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 1;
+}
+
+.dir-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dir-card:hover .dir-card-img {
+  transform: scale(1.06);
+}
+
+.dir-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 20px 28px;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .dir-icon {
@@ -351,6 +390,10 @@
   .dir-connector {
     display: none;
   }
+
+  .dir-card-img-wrapper {
+    height: 130px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -360,7 +403,15 @@
   }
 
   .dir-card {
-    padding: 26px 20px 24px;
+    padding: 0;
+  }
+
+  .dir-card-body {
+    padding: 20px 16px 22px;
+  }
+
+  .dir-card-img-wrapper {
+    height: 140px;
   }
 
   .slide-directions .slide-title {
