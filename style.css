@@ -2145,7 +2145,7 @@ h1.title .ai {
 }
 
 .ai-grid-app {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .ai-card {
@@ -2153,46 +2153,30 @@ h1.title .ai {
   flex-direction: column;
   align-items: stretch;
   gap: 0;
-  padding: 0;
-  min-height: auto;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  border-left: 3px solid rgba(167, 139, 250, 0.7);
+  padding: 24px;
+  min-height: 190px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-left: 4px solid rgba(167, 139, 250, 0.75);
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   opacity: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .ai-card-app {
-  border-color: rgba(244, 114, 182, 0.28);
+  border-color: rgba(244, 114, 182, 0.22);
   border-left-color: rgba(244, 114, 182, 0.75);
-}
-
-.ai-card-img-wrapper {
-  width: 100%;
-  height: 130px;
-  overflow: hidden;
-  position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.ai-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.ai-card:hover .ai-card-img {
-  transform: scale(1.06);
 }
 
 .ai-card-body {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 0;
+  text-align: left;
 }
 
 .slide-ai.active .ai-card {
@@ -2216,7 +2200,7 @@ h1.title .ai {
 }
 
 .ai-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(139, 92, 246, 0.2);
   border-color: rgba(167, 139, 250, 0.5);
 }
@@ -2249,10 +2233,18 @@ h1.title .ai {
 }
 
 .ai-card span {
-  font-size: clamp(14px, 1.3vw, 16px);
+  font-size: clamp(16px, 1.4vw, 18px);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.95);
   line-height: 1.35;
+  text-align: left;
+}
+
+.ai-card-desc {
+  font-size: clamp(12px, 1.2vw, 13.5px);
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.45;
+  margin: 0;
   text-align: left;
 }
 
@@ -2321,4 +2313,84 @@ h1.title .ai {
     width: 26px;
     height: 26px;
   }
+}
+
+/* ===== STANDARDIZED SLIDE HEADERS (UNIFORM SIZE & POSITION) ===== */
+.slide:not(.slide-hero):not(.slide-finale) {
+  justify-content: flex-start !important;
+  padding-top: clamp(40px, 6vh, 80px) !important;
+}
+
+.slide:not(.slide-hero):not(.slide-finale) .slide-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  font-size: clamp(11px, 1.2vw, 13px) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #c4b5fd !important;
+  margin-bottom: 12px !important;
+  height: 24px !important;
+  margin-top: 0 !important;
+}
+
+.slide:not(.slide-hero):not(.slide-finale) .slide-label .label-icon {
+  width: 18px !important;
+  height: 18px !important;
+  color: #c4b5fd !important;
+}
+
+.slide:not(.slide-hero):not(.slide-finale) .slide-title {
+  font-size: clamp(24px, 3.2vw, 44px) !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+/* Standardize intro/description text under the title */
+.slide:not(.slide-hero):not(.slide-finale) > p[class*="-intro"],
+.slide:not(.slide-hero):not(.slide-finale) > p[class*="-desc"],
+.slide:not(.slide-hero):not(.slide-finale) > .digit-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .eco-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .didox-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .problems-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .strategy-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .dir-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .mgmt-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .campus-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .learning-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .ai-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .roles-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .demo-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .life-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .pay-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .kredit-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .arch-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .sec-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .tech-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .fnd-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .team-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .roadmap-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .roi-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .res-intro {
+  font-size: clamp(13.5px, 1.3vw, 16px) !important;
+  font-weight: 400 !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: 1.5 !important;
+  margin-top: 0 !important;
+  margin-bottom: 22px !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  display: block !important;
 }
