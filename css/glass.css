@@ -42,8 +42,7 @@
 .result-card,
 .team-group,
 .team-stat-item,
-.demo-feat-chip,
-.hub-sat {
+.demo-feat-chip {
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
   background: var(--glass-bg) !important;
