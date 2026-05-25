@@ -2,7 +2,7 @@
 .slide-roles {
   overflow: hidden;
   justify-content: flex-start;
-  padding: 14px clamp(12px, 2vw, 32px) 28px;
+  padding: clamp(24px, 3.5vh, 48px) clamp(12px, 2vw, 32px) 28px !important;
 }
 
 .roles-bg {
@@ -69,8 +69,12 @@
 .slide-roles .slide-title {
   position: relative;
   z-index: 1;
-  margin-bottom: 6px;
+  margin-bottom: 4px !important;
   font-size: clamp(28px, 4vw, 48px);
+}
+
+.slide-roles > .roles-intro {
+  margin-bottom: 10px !important;
 }
 
 .roles-intro {
@@ -79,31 +83,13 @@
   font-size: clamp(13px, 1.35vw, 16px);
   font-weight: 400;
   color: rgba(255, 255, 255, 0.65);
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   max-width: 720px;
 }
 
 .roles-intro strong {
   color: #bae6fd;
   font-weight: 600;
-}
-
-.roles-stat {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: rgba(186, 230, 253, 0.95);
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(125, 211, 252, 0.35);
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
 }
 
 /* Video + 4 ta rol */
@@ -115,28 +101,31 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 22px;
+  gap: 20px;
   flex: 1;
   min-height: 0;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 0;
 }
 
 .roles-banner-wrap {
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 0;
   width: 100%;
-  padding: 6px 6px 0;
-  border-radius: 22px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow:
-    0 24px 60px rgba(0, 20, 60, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  background: rgba(8, 24, 50, 0.6);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: min(52vh, 460px);
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent !important;
+  box-shadow: none;
+  position: relative;
+  display: block;
+  line-height: 0;
+  aspect-ratio: 16 / 7.5;
+  max-height: min(52vh, 450px);
   opacity: 0;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .slide-roles.active .roles-banner-wrap {
@@ -155,14 +144,25 @@
 }
 
 .roles-banner-video {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  max-height: min(68vh, 640px);
-  object-fit: contain;
-  object-position: center top;
-  vertical-align: middle;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 14%;
   background: transparent;
+  transform: translateY(-3%);
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 6%, #000 90%, transparent 100%);
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, #000 6%, #000 90%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  filter: drop-shadow(0 20px 40px rgba(0, 15, 45, 0.35));
 }
 
 .roles-legend {
@@ -261,21 +261,6 @@
 .roles-legend-customer .roles-legend-dot {
   background: #f472b6;
   color: #f472b6;
-}
-
-.roles-stat::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #38bdf8;
-  box-shadow: 0 0 12px #38bdf8;
-  animation: rolesStatPulse 2s ease-in-out infinite;
-}
-
-@keyframes rolesStatPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
 }
 
 .roles-grid {
@@ -519,11 +504,8 @@
   }
 
   .roles-banner-wrap {
-    min-height: min(44vh, 380px);
-  }
-
-  .roles-banner-video {
-    max-height: min(58vh, 520px);
+    aspect-ratio: 16 / 7.2;
+    max-height: min(48vh, 400px);
   }
 
   .roles-legend-item {
@@ -539,12 +521,14 @@
   }
 
   .roles-banner-wrap {
-    min-height: min(32vh, 260px);
+    aspect-ratio: 16 / 8;
+    max-height: min(42vh, 340px);
   }
 
   .roles-banner-video {
-    max-height: min(45vh, 380px);
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center 12%;
+    transform: translateY(-2%);
   }
 
   .roles-legend-item {

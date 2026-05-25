@@ -8,7 +8,6 @@
 .strategy-banner,
 .mgmt-node-card,
 .campus-card,
-.ai-card,
 .learning-card,
 .dir-card,
 .eco-node,
@@ -17,11 +16,6 @@
 .didox-card,
 .didox-chip,
 .didox-step,
-.fnd-highlight,
-.fnd-compare-card,
-.fnd-module,
-.fnd-chip,
-.roles-banner-wrap,
 .roles-legend-item,
 .role-card,
 .arch-node,
@@ -35,12 +29,8 @@
 .pay-float,
 .sec-card,
 .sec-chip,
-.tech-card,
 .roadmap-card,
-.roi-card,
-.roi-chip,
-.result-card,
-.team-group,
+.team-card,
 .team-stat-item,
 .demo-feat-chip {
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
@@ -53,13 +43,11 @@
 /* Yumshoqroq fon — kichik elementlar */
 .pay-float,
 .eco-chip,
-.roi-chip,
 .sec-chip,
 .life-chip,
 .didox-chip,
 .demo-feat-chip,
-.arch-badge,
-.finale-tags span {
+.arch-badge {
   background: var(--glass-bg-soft) !important;
   -webkit-backdrop-filter: blur(14px) saturate(var(--glass-saturate));
   backdrop-filter: blur(14px) saturate(var(--glass-saturate));
@@ -90,6 +78,34 @@
 
 .mgmt-node-card {
   background: rgba(15, 35, 70, 0.55) !important;
+}
+
+/* AI kartalar — rangli gradient, faqat blur */
+.slide-ai .ai-card {
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+}
+
+/* Kredit kartalar — rangli gradient, faqat blur */
+.slide-kredit .kredit-card {
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+}
+
+/* Roadmap kartalar — rangli gradient, faqat blur */
+.slide-roadmap .roadmap-card {
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  box-shadow: var(--glass-shadow), var(--glass-inset);
+}
+
+/* Xavfsizlik kartalar — rangli gradient, faqat blur */
+.slide-security .sec-card {
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  box-shadow: var(--glass-shadow), var(--glass-inset);
 }
 
 /* Telefon ichidagi elementlar — alohida */
@@ -144,10 +160,7 @@
 .role-icon,
 .dir-icon,
 .eco-dot,
-.tech-card-icon,
 .sec-card-icon,
-.result-card-icon,
-.roi-card-icon,
 .kredit-card-icon,
 .life-card-icon,
 .didox-card-icon,

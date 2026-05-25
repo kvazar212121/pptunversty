@@ -96,16 +96,12 @@ function updateSlide(index) {
   else setHeroParticles(false);
   const slide = slides[index];
   if (slide.classList.contains('slide-digit')) animateDigitTiers();
-  if (slide.classList.contains('slide-roi')) animateROI();
-  if (slide.classList.contains('slide-results')) animateResults();
   handleRolesVideo(slide);
   currentSlide = index;
 }
 
 const slideVideos = [
   { el: document.querySelector('.roles-banner-video'), slideClass: 'slide-roles' },
-  { el: document.querySelector('.arch-banner-video'), slideClass: 'slide-arch' },
-  { el: document.querySelector('.roadmap-banner-video'), slideClass: 'slide-roadmap' },
 ];
 
 function handleRolesVideo(activeSlide) {
@@ -151,42 +147,6 @@ function animateCounters() {
       current += step;
       if (current >= target) { counter.textContent = target.toLocaleString(); return; }
       counter.textContent = Math.floor(current).toLocaleString();
-      requestAnimationFrame(update);
-    }
-    update();
-  });
-}
-
-function animateROI() {
-  const counters = document.querySelectorAll('.roi-num[data-count]');
-  counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    const duration = 1500;
-    const step = target / (duration / 16);
-    let current = 0;
-    const suffix = counter.textContent.replace(/[0-9]/g, '');
-    function update() {
-      current += step;
-      if (current >= target) { counter.textContent = target + suffix; return; }
-      counter.textContent = Math.floor(current) + suffix;
-      requestAnimationFrame(update);
-    }
-    update();
-  });
-}
-
-function animateResults() {
-  const counters = document.querySelectorAll('.rc-num[data-count]');
-  counters.forEach(counter => {
-    const target = parseInt(counter.getAttribute('data-count'));
-    const duration = 1500;
-    const step = target / (duration / 16);
-    let current = 0;
-    const suffix = counter.textContent.replace(/[0-9]/g, '');
-    function update() {
-      current += step;
-      if (current >= target) { counter.textContent = target + suffix; return; }
-      counter.textContent = Math.floor(current) + suffix;
       requestAnimationFrame(update);
     }
     update();
