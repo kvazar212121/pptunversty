@@ -6,26 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMART UNIVERSITY — Smart Universitet</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/deck-backdrop.css?v=3">
   <link rel="stylesheet" href="css/slide-learning.css">
-  <link rel="stylesheet" href="css/slide-directions.css">
-  <link rel="stylesheet" href="css/slide-roles.css">
-  <link rel="stylesheet" href="css/slide-arch.css">
-  <link rel="stylesheet" href="css/slide-roadmap.css">
-  <link rel="stylesheet" href="css/slide-security.css">
+  <link rel="stylesheet" href="css/slide-directions.css?v=5">
+  <link rel="stylesheet" href="css/slide-roadmap.css?v=2">
   <link rel="stylesheet" href="css/modal-integration.css?v=6">
   <link rel="stylesheet" href="css/slide-demo.css">
-  <link rel="stylesheet" href="css/modal-roles.css?v=2">
-  <link rel="stylesheet" href="css/slide-team.css">
+  <link rel="stylesheet" href="css/modal-roles.css?v=4">
   <link rel="stylesheet" href="css/slide-finale.css">
   <link rel="stylesheet" href="css/glass.css">
+  <link rel="stylesheet" href="css/slide-role-models.css?v=7">
+  <link rel="stylesheet" href="css/slide-results.css?v=2">
+  <link rel="stylesheet" href="css/slide-transform.css?v=3">
 </head>
 
 <body>
 
-  <div class="progress-bar"></div>
+  <div class="deck-global-bg" aria-hidden="true">
+    <div class="deck-global-bg-gradient"></div>
+    <div class="deck-global-bg-glow deck-global-bg-glow--1"></div>
+    <div class="deck-global-bg-glow deck-global-bg-glow--2"></div>
+    <div class="deck-global-bg-glow deck-global-bg-glow--3"></div>
+  </div>
   <canvas id="particles"></canvas>
-  <div class="slide-number-fixed">01 / 26</div>
-  <div class="nav-hint">KEYINGI → <span>→</span></div>
+
+  <nav class="deck-nav" id="deck-nav" aria-label="Slayd navigatsiyasi">
+    <button type="button" class="deck-nav-btn deck-nav-prev" id="deck-prev" aria-label="Oldingi slayd">
+      <span aria-hidden="true">←</span> Oldingi
+    </button>
+    <span class="deck-nav-count" id="deck-count" aria-live="polite">01 / 14</span>
+    <button type="button" class="deck-nav-btn deck-nav-next" id="deck-next" aria-label="Keyingi slayd">
+      Keyingi <span aria-hidden="true">→</span>
+    </button>
+  </nav>
 
   <!-- ===== SLIDE 1 — TITUL ===== -->
   <div class="slide slide-hero" id="slide-hero">
@@ -138,117 +151,57 @@
       </button>
     </div>
   </div><!-- ===== SLIDE 2 — RAQAMLASHTIRISH HOLATI ===== -->
-  <div class="slide slide-digit">
-    <div class="slide-label digit-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M12 20V10" />
-        <path d="M18 20V4" />
-        <path d="M6 20v-4" />
-      </svg>
-      Hozirgi holat
+  <div class="slide slide-digit slide-digit-modules">
+    <div class="mgmt-mod-bg" aria-hidden="true">
+      <div class="mgmt-mod-orb mgmt-mod-orb-1"></div>
+      <div class="mgmt-mod-orb mgmt-mod-orb-2"></div>
     </div>
-    <div class="slide-title">Universitetning hozirgi raqamlashtirish darajasi</div>
-    <p class="digit-intro">
-      <span class="intro-platforms">
-        <span class="sys-label sys-hemis">HEMIS</span>
-        <span class="sys-label sys-moodle">Moodle</span>
-        <span class="sys-label sys-edo">Ijro.uz</span>
-        <span class="sys-label sys-didox">Didox</span>
-      </span>
-      <span class="intro-copy">
-        Universitetda turli tizimlar joriy qilingan, lekin bo'limlar kesimida
-        <strong>raqamlashtirish darajasi notekis</strong> bo'lib qolmoqda.
-      </span>
+
+    <div class="slide-label digit-label">Hozirgi holat</div>
+    <h2 class="slide-title">Universitetning hozirgi raqamlashtirish darajasi</h2>
+    <p class="digit-intro-text">
+      Universitetda turli tizimlar joriy qilingan, lekin bo'limlar kesimida
+      <strong>raqamlashtirish darajasi notekis</strong> bo'lib qolmoqda.
     </p>
 
-    <div class="digit-tiers">
-      <div class="tier-card tier-high">
-        <div class="tier-top">
-          <div class="tier-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-              <path d="m9 11 3 3L22 4" />
-            </svg>
-          </div>
-          <div class="tier-meta">
-            <span class="tier-badge">Yuqori daraja</span>
-            <span class="tier-range" data-pct="90">90%</span>
-          </div>
+    <div class="mgmt-mod-grid">
+      <article class="mgmt-mod-card accent-teal">
+        <div class="mgmt-mod-index">01</div>
+        <div class="digit-card-head">
+          <div class="digit-pct">90%</div>
+          <div class="digit-tier-label">Yuqori daraja</div>
         </div>
-        <div class="tier-meter">
-          <div class="tier-meter-fill" data-width="90%"></div>
-        </div>
-        <h3 class="tier-depts">Yuqori daraja</h3>
-        <p class="tier-desc">Moliyalashtirish, buxgalteriya hisobi va inson resurslarini boshqarish jarayonlari
-          UzASBO 2 hamda hrm.argos.uz kabi tashqi axborot tizimlari orqali deyarli to'liq avtomatlashtirilgan.</p>
-        <div class="tier-tags">
-          <span>UzASBO 2</span>
-          <span>HRM</span>
-          <span>Buxgalteriya</span>
-          <span>Moliyalashtirish</span>
-        </div>
-      </div>
+        <p>Moliyalashtirish, buxgalteriya hisobi va inson resurslarini boshqarish jarayonlari UzASBO 2 hamda hrm.argos.uz kabi tashqi axborot tizimlari orqali deyarli to'liq avtomatlashtirilgan.</p>
+        <div class="mgmt-mod-tags"><span>UzASBO 2</span><span>HRM</span><span>Buxgalteriya</span><span>Moliyalashtirish</span></div>
+      </article>
 
-      <div class="tier-card tier-mid">
-        <div class="tier-top">
-          <div class="tier-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M12 20V10" />
-              <path d="M18 20V4" />
-              <path d="M6 20v-4" />
-            </svg>
-          </div>
-          <div class="tier-meta">
-            <span class="tier-badge">O'rta daraja</span>
-            <span class="tier-range" data-pct="60">60%</span>
-          </div>
+      <article class="mgmt-mod-card accent-amber">
+        <div class="mgmt-mod-index">02</div>
+        <div class="digit-card-head">
+          <div class="digit-pct">60%</div>
+          <div class="digit-tier-label">O'rta daraja</div>
         </div>
-        <div class="tier-meter">
-          <div class="tier-meter-fill" data-width="60%"></div>
-        </div>
-        <h3 class="tier-depts">O'rta daraja</h3>
-        <p class="tier-desc">Universitetda HEMIS, Moodle va EDO.IJRO.UZ kabi tizimlar joriy qilingan. Devonxona hamda
-          Registrator ofisida asosiy yuritish tizimlari mavjud, biroq ayrim ichki jarayonlar hali ham qog'oz hujjatlar
-          va qo'lda bajariladigan amaliyotlarga bog'liq.</p>
-        <div class="tier-tags">
-          <span>HEMIS</span>
-          <span>Moodle</span>
-          <span>EDO.IJRO.UZ</span>
-          <span>Registrator</span>
-        </div>
-      </div>
+        <p>Universitetda HEMIS, Moodle va EDO.IJRO.UZ kabi tizimlar joriy qilingan. Devonxona hamda Registrator ofisida asosiy yuritish tizimlari mavjud, biroq ayrim ichki jarayonlar hali ham qog'oz hujjatlar va qo'lda bajariladigan amaliyotlarga bog'liq.</p>
+        <div class="mgmt-mod-tags"><span>HEMIS</span><span>Moodle</span><span>EDO.IJRO.UZ</span><span>Registrator</span></div>
+      </article>
 
-      <div class="tier-card tier-low">
-        <div class="tier-top">
-          <div class="tier-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
-              <path d="M12 9v4" />
-              <path d="M12 17h.01" />
-            </svg>
-          </div>
-          <div class="tier-meta">
-            <span class="tier-badge">Past daraja</span>
-            <span class="tier-range" data-pct="30">30%</span>
-          </div>
+      <article class="mgmt-mod-card accent-red">
+        <div class="mgmt-mod-index">03</div>
+        <div class="digit-card-head">
+          <div class="digit-pct">30%</div>
+          <div class="digit-tier-label">Past daraja</div>
         </div>
-        <div class="tier-meter">
-          <div class="tier-meter-fill" data-width="30%"></div>
-        </div>
-        <h3 class="tier-depts">Past daraja</h3>
-        <p class="tier-desc">Arxiv, omborxona, TTJ va xalqaro reytinglar bilan ishlash bo'limlarida hujjatlarni
-          arxivlash, tovar-moddiy boyliklar hisobi va joylashtirish jarayonlari asosan Excel yoki qog'oz shaklida
-          yuritilmoqda.</p>
-        <div class="tier-tags">
-          <span>Arxiv</span>
-          <span>Omborxona</span>
-          <span>TTJ</span>
-          <span>Excel</span>
-        </div>
-      </div>
+        <p>Arxiv, omborxona, TTJ va xalqaro reytinglar bilan ishlash bo'limlarida hujjatlarni arxivlash, tovar-moddiy boyliklar hisobi va joylashtirish jarayonlari asosan Excel yoki qog'oz shaklida yuritilmoqda.</p>
+        <div class="mgmt-mod-tags"><span>Arxiv</span><span>Omborxona</span><span>TTJ</span><span>Excel</span></div>
+      </article>
     </div>
-  </div><!-- ===== SLIDE 4 — MUAMMOLAR ===== -->
-  <div class="slide slide-problems">
+  </div><!-- ===== SLIDE 3 — MUAMMOLAR ===== -->
+  <div class="slide slide-problems slide-problems-modules">
+    <div class="mgmt-mod-bg" aria-hidden="true">
+      <div class="mgmt-mod-orb mgmt-mod-orb-1"></div>
+      <div class="mgmt-mod-orb mgmt-mod-orb-2"></div>
+    </div>
+
     <div class="slide-label problems-label">
       <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
         <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
@@ -257,68 +210,45 @@
       </svg>
       Muammo va kamchiliklar
     </div>
-    <div class="slide-title">Universitet tizimidagi asosiy muammolar</div>
+    <h2 class="slide-title">Universitet tizimidagi asosiy muammolar</h2>
 
-    <div class="problem-grid">
-      <div class="problem-card problem-card--red">
-        <div class="problem-card-body">
-          <div class="problem-index">01</div>
-          <h3 class="p-title">Akademik ma'lumotlar qo'lda yuritiladi</h3>
-          <p class="p-desc">O'qituvchilarning ish rejalari, o'quv yuklamalari, dars jadvallari va baholar
-            qaydnomalari bir nechta joyda qo'lda shakllantiriladi. Bu xatolik, takroriy kiritish va ma'lumotlarning mos
-            kelmasligi xavfini oshiradi.</p>
-          <div class="problem-tags">
-            <span>Ish rejalari</span>
-            <span>Yuklama</span>
-            <span>Dars jadvali</span>
-            <span>Baholar</span>
-          </div>
-        </div>
-      </div>
+    <div class="mgmt-mod-grid">
+      <article class="mgmt-mod-card accent-red">
+        <div class="mgmt-mod-index">01</div>
+        <h3 class="problem-mod-title">Akademik ma'lumotlar qo'lda yuritiladi</h3>
+        <p>O'qituvchilarning ish rejalari, o'quv yuklamalari, dars jadvallari va baholar qaydnomalari bir nechta joyda
+          qo'lda shakllantiriladi. Bu xatolik, takroriy kiritish va ma'lumotlarning mos kelmasligi xavfini oshiradi.</p>
+        <div class="mgmt-mod-tags"><span>Ish rejalari</span><span>Yuklama</span><span>Dars jadvali</span><span>Baholar</span></div>
+      </article>
 
-      <div class="problem-card problem-card--amber">
-        <div class="problem-card-body">
-          <div class="problem-index">02</div>
-          <h3 class="p-title">Hujjat aylanishi qog'ozga bog'liq</h3>
-          <p class="p-desc">Ichki buyruqlarni tanishtirish, fuqarolik-huquqiy shartnomalar, arxivga topshiriladigan
-            hujjatlar, komplayens deklaratsiyalari va xizmat safari buyruqlari ko'p holatda qog'oz, muhr va qo'lda imzo
-            orqali yuritiladi.</p>
-          <div class="problem-tags">
-            <span>Buyruqlar</span>
-            <span>Shartnomalar</span>
-            <span>Arxiv</span>
-            <span>Imzo</span>
-          </div>
-        </div>
-      </div>
+      <article class="mgmt-mod-card accent-amber">
+        <div class="mgmt-mod-index">02</div>
+        <h3 class="problem-mod-title">Hujjat aylanishi qog'ozga bog'liq</h3>
+        <p>Ichki buyruqlarni tanishtirish, fuqarolik-huquqiy shartnomalar, arxivga topshiriladigan hujjatlar,
+          komplayens deklaratsiyalari va xizmat safari buyruqlari ko'p holatda qog'oz, muhr va qo'lda imzo orqali
+          yuritiladi.</p>
+        <div class="mgmt-mod-tags"><span>Buyruqlar</span><span>Shartnomalar</span><span>Arxiv</span><span>Imzo</span></div>
+      </article>
 
-      <div class="problem-card problem-card--cyan">
-        <div class="problem-card-body">
-          <div class="problem-index">03</div>
-          <h3 class="p-title">Analitika va markaziy monitoring yo'q</h3>
-          <p class="p-desc">Bo'limlar kesimidagi ko'rsatkichlar yagona analitik markazda jamlanmaydi. Jarayonlar
-            holati real vaqt rejimida ko'rinmagani uchun ma'lumotlar kech aniqlanadi, hisobotlar qo'lda yig'iladi va
-            boshqaruv qarorlari yetarli tezkor ma'lumotga tayanmaydi.</p>
-          <div class="problem-tags">
-            <span>Dashboard</span>
-            <span>Monitoring</span>
-            <span>Hisobot</span>
-            <span>Analitika</span>
-          </div>
-        </div>
-      </div>
+      <article class="mgmt-mod-card accent-teal">
+        <div class="mgmt-mod-index">03</div>
+        <h3 class="problem-mod-title">Analitika va markaziy monitoring yo'q</h3>
+        <p>Bo'limlar kesimidagi ko'rsatkichlar yagona analitik markazda jamlanmaydi. Jarayonlar holati real vaqt rejimida
+          ko'rinmagani uchun ma'lumotlar kech aniqlanadi, hisobotlar qo'lda yig'iladi va boshqaruv qarorlari yetarli
+          tezkor ma'lumotga tayanmaydi.</p>
+        <div class="mgmt-mod-tags"><span>Dashboard</span><span>Monitoring</span><span>Hisobot</span><span>Analitika</span></div>
+      </article>
     </div>
 
     <div class="problems-result">
       <strong>Natija:</strong> xodimlar vaqtini ma'lumot yig'ish va qayta kiritishga sarflaydi, jarayonlar shaffofligi
       pasayadi, real holatni tez ko'rish va boshqaruv qarorini vaqtida qabul qilish qiyinlashadi.
     </div>
-  </div><!-- ===== SLIDE 4 — STRATEGIK MAQSAD ===== -->
-  <div class="slide slide-strategy">
-    <div class="strategy-bg" aria-hidden="true">
-      <div class="strategy-orb strategy-orb-1"></div>
-      <div class="strategy-orb strategy-orb-2"></div>
-      <div class="strategy-ring"></div>
+  </div><!-- ===== SLIDE 4 — STRATEGIK YECHIMLAR ===== -->
+  <div class="slide slide-strategy slide-strategy-modules">
+    <div class="mgmt-mod-bg" aria-hidden="true">
+      <div class="mgmt-mod-orb mgmt-mod-orb-1"></div>
+      <div class="mgmt-mod-orb mgmt-mod-orb-2"></div>
     </div>
 
     <div class="slide-label strategy-label">
@@ -327,84 +257,48 @@
         <circle cx="12" cy="12" r="6" />
         <circle cx="12" cy="12" r="2" />
       </svg>
-      Strategiya
+      Yechimlar
     </div>
+    <h2 class="slide-title">Asosiy strategik takliflar va loyiha yechimlari</h2>
 
-    <h2 class="slide-title">Strategik maqsad</h2>
+    <div class="mgmt-mod-grid">
+      <button type="button" class="mgmt-mod-card accent-teal" data-open-strategy-modal="learning" aria-haspopup="dialog">
+        <span class="mgmt-mod-plus" aria-hidden="true">+</span>
+        <div class="mgmt-mod-index">01</div>
+        <h3 class="strategy-mod-title">Smart Learning</h3>
+        <ul class="strategy-mod-list">
+          <li>O'quv jarayonlarini rejalashtirish, tashkil etish va nazorat qilish uchun yagona akademik platforma</li>
+          <li>Ish rejasi, o'quv yuklamasi, dars jadvali, baholash va amaliyot jarayonlarini raqamli boshqarish</li>
+          <li>Talaba, professor-o'qituvchi va kafedra faoliyati bo'yicha shaffof monitoringni ta'minlash</li>
+        </ul>
+        <div class="mgmt-mod-tags"><span>O'quv jarayoni</span><span>Yuklama</span><span>Baholash</span></div>
+      </button>
 
-    <div class="strategy-wrap">
-      <div class="strategy-hub" aria-hidden="true">
-        <svg class="strategy-lines" viewBox="0 0 400 400">
-          <circle class="hub-orbit" cx="200" cy="200" r="155" fill="none" stroke="rgba(139,92,246,0.18)"
-            stroke-width="1.5" stroke-dasharray="8 8" />
-          <line class="hub-line" x1="200" y1="200" x2="200" y2="55" />
-          <line class="hub-line" x1="200" y1="200" x2="337.9" y2="155.2" />
-          <line class="hub-line" x1="200" y1="200" x2="285.2" y2="317.3" />
-          <line class="hub-line" x1="200" y1="200" x2="114.8" y2="317.3" />
-          <line class="hub-line" x1="200" y1="200" x2="62.1" y2="155.2" />
-        </svg>
-        <div class="hub-sat" style="--angle: -90deg"><span>LMS</span></div>
-        <div class="hub-sat" style="--angle: -18deg"><span>ERP</span></div>
-        <div class="hub-sat" style="--angle: 54deg"><span>EDMS</span></div>
-        <div class="hub-sat" style="--angle: 126deg"><span>SuperApp</span></div>
-        <div class="hub-sat" style="--angle: 198deg"><span>AI</span></div>
-        <div class="hub-core">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-            <path d="M2 17l10 5 10-5" />
-            <path d="M2 12l10 5 10-5" />
-          </svg>
-          <span class="hub-name">SMART </span>
-          <span class="hub-sub">Yagona baza</span>
-        </div>
-      </div>
+      <button type="button" class="mgmt-mod-card accent-amber" data-open-strategy-modal="management" aria-haspopup="dialog">
+        <span class="mgmt-mod-plus" aria-hidden="true">+</span>
+        <div class="mgmt-mod-index">02</div>
+        <h3 class="strategy-mod-title">Smart Management</h3>
+        <ul class="strategy-mod-list">
+          <li>Universitetning ma'muriy, moliyaviy, hujjat va resurs jarayonlarini yagona boshqaruv muhitiga birlashtirish</li>
+          <li>Buyruqlar, shartnomalar, arxiv, ombor, TTJ va arizalar bo'yicha elektron ish oqimlarini joriy etish</li>
+          <li>Rahbariyat uchun real vaqt analitikasi, KPI monitoringi va qaror qabul qilish panelini yaratish</li>
+        </ul>
+        <div class="mgmt-mod-tags"><span>Boshqaruv</span><span>Workflow</span><span>Dashboard</span></div>
+      </button>
 
-      <div class="strategy-content">
-        <p class="strategy-quote">
-          Barcha jarayonlarni <strong>yagona platformaga</strong> birlashtirish orqali
-          boshqaruvni optimallashtirish va xavfsizlikni oshirish.
-        </p>
-
-        <div class="strategy-flow">
-          <div class="flow-item">
-            <div class="flow-icon flow-icon-1">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
-            </div>
-            <span>Tezkor qaror</span>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-item">
-            <div class="flow-icon flow-icon-2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-            </div>
-            <span>Xavfsizlik</span>
-          </div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-item">
-            <div class="flow-icon flow-icon-3">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                <path d="m9 11 3 3L22 4" />
-              </svg>
-            </div>
-            <span>100% nazorat</span>
-          </div>
-        </div>
-
-        <div class="strategy-banner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-          </svg>
-          <span>LMS + ERP + EDMS + SuperApp + AI  → <strong>Bitta tizim, bitta baza va real vaqt rejimida</strong></span>
-        </div>
-      </div>
+      <button type="button" class="mgmt-mod-card accent-campus" data-open-strategy-modal="campus" aria-haspopup="dialog">
+        <span class="mgmt-mod-plus" aria-hidden="true">+</span>
+        <div class="mgmt-mod-index">03</div>
+        <h3 class="strategy-mod-title">Smart Campus</h3>
+        <ul class="strategy-mod-list">
+          <li>IoT va AKT texnologiyalari asosida universitet infratuzilmasini aqlli boshqaruv tizimiga o'tkazish</li>
+          <li>Kirish-chiqish nazorati, TTJ, auditoriyalar, energiya, xavfsizlik va texnik xizmatlarni raqamli kuzatish</li>
+          <li>Kampus resurslaridan samarali foydalanish, xavfsizlik va xizmat ko'rsatish tezligini oshirish</li>
+        </ul>
+        <div class="mgmt-mod-tags"><span>IoT</span><span>AKT</span><span>Infratuzilma</span></div>
+      </button>
     </div>
-  </div><!-- ===== SLIDE 9 — STRATEGIK YECHIMLAR ===== -->
+  </div><!-- ===== SLIDE 5 — AI MOBIL ILOVA ===== -->
   <div class="slide slide-directions">
     <div class="dir-bg" aria-hidden="true">
       <div class="dir-orb dir-orb-1"></div>
@@ -412,104 +306,70 @@
       <div class="dir-orb dir-orb-3"></div>
     </div>
 
-    <div class="slide-label dir-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-      </svg>
-      4 ta asosiy yo'nalish
-    </div>
-    <h2 class="slide-title">Strategik yechimlar</h2>
+    <div class="slide-label dir-label">AI mobile app</div>
+    <h2 class="slide-title">Sun'iy intellekt asosidagi universitet mobil ilovasi</h2>
 
-    <p class="dir-intro">To'rtta ustun — bitta <strong>SMART </strong> platformasi orqali universitetni raqamlashtirish
-    </p>
-
-    <div class="dir-connector" aria-hidden="true"></div>
-
-    <div class="dir-grid">
-      <article class="dir-card dir-card-1">
-        <span class="dir-num">01</span>
-        <div class="dir-card-img-wrapper">
-          <img class="dir-card-img" src="images/strategy_learning.png" alt="Smart Learning" loading="lazy">
-        </div>
-        <div class="dir-card-body">
-          <div class="dir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-              <path d="M6 12v5c3.3 0 6-1.3 6-3v-5" />
-            </svg></div>
-          <h3 class="dir-title">Smart Learning</h3>
-          <p class="dir-desc">O'quv jarayoni, LMS va zamonaviy ta'lim texnologiyalari</p>
-          <ul class="dir-pills">
-            <li>LMS</li>
-            <li>Hybrid</li>
-            <li>AI proctoring</li>
-            <li>AR/VR</li>
-          </ul>
+    <div class="ai-mobile-layout">
+      <article class="ai-mobile-card ai-mobile-card--teal">
+        <h3>AI Professor</h3>
+        <p>Talabaga fan bo'yicha individual tushuntirish, qo'shimcha material, test tayyorlash va mavzuni bosqichma-bosqich o'zlashtirishda yordam beradi.</p>
+        <div class="ai-mobile-tags">
+          <span>Mentor</span><span>Test</span><span>Material</span>
         </div>
       </article>
-      <article class="dir-card dir-card-2">
-        <span class="dir-num">02</span>
-        <div class="dir-card-img-wrapper">
-          <img class="dir-card-img" src="images/strategy_management.png" alt="Smart Management" loading="lazy">
-        </div>
-        <div class="dir-card-body">
-          <div class="dir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-              <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-              <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-            </svg></div>
-          <h3 class="dir-title">Smart Management</h3>
-          <p class="dir-desc">Boshqaruv, hujjatlar va resurslarni markazlashtirish</p>
-          <ul class="dir-pills">
-            <li>EDMS</li>
-            <li>HR & KPI</li>
-            <li>Byudjet</li>
-            <li>ERP</li>
-          </ul>
+
+      <article class="ai-mobile-card ai-mobile-card--amber">
+        <h3>AI Chatbot</h3>
+        <p>Talaba, o'qituvchi va xodimlarga jadval, to'lov, ariza, TTJ, hujjat va universitet xizmatlari bo'yicha 24/7 tezkor javob beradi.</p>
+        <div class="ai-mobile-tags">
+          <span>24/7</span><span>FAQ</span><span>Xizmatlar</span>
         </div>
       </article>
-      <article class="dir-card dir-card-3">
-        <span class="dir-num">03</span>
-        <div class="dir-card-img-wrapper">
-          <img class="dir-card-img" src="images/strategy_campus.png" alt="Smart Campus" loading="lazy">
-        </div>
-        <div class="dir-card-body">
-          <div class="dir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-              <path d="M2 12h20" />
-            </svg></div>
-          <h3 class="dir-title">Smart Campus</h3>
-          <p class="dir-desc">Aqlli kampus, xavfsizlik va IoT infratuzilma</p>
-          <ul class="dir-pills">
-            <li>FaceID</li>
-            <li>IoT</li>
-            <li>AI video</li>
-            <li>SOS</li>
-          </ul>
+
+      <article class="ai-mobile-card ai-mobile-card--red">
+        <h3>Ichki muloqot</h3>
+        <p>Guruh, kafedra, dekanat va bo'limlar o'rtasida rasmiy xabar almashish, bildirishnoma yuborish va topshiriqlar ijrosini kuzatishni soddalashtiradi.</p>
+        <div class="ai-mobile-tags">
+          <span>Xabar</span><span>Topshiriq</span><span>Bildirishnoma</span>
         </div>
       </article>
-      <article class="dir-card dir-card-4">
-        <span class="dir-num">04</span>
-        <div class="dir-card-img-wrapper">
-          <img class="dir-card-img" src="images/strategy_superapp.png" alt="AI &amp; SuperApp" loading="lazy">
+
+      <article class="ai-mobile-card ai-mobile-card--blue">
+        <div class="ai-mobile-card-top">
+          <h3>Rollarga mos interfeys</h3>
+          <p>Talaba, professor-o'qituvchi, dekanat, bo'lim xodimi va rahbariyat uchun alohida ekranlar hamda kerakli funksiyalarni taqdim etadi.</p>
         </div>
-        <div class="dir-card-body">
-          <div class="dir-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 8V4H8" />
-              <rect width="16" height="12" x="4" y="8" rx="2" />
-              <path d="M2 14h2" />
-              <path d="M20 14h2" />
-              <path d="M15 13v2" />
-              <path d="M9 13v2" />
-            </svg></div>
-          <h3 class="dir-title">AI &amp; SuperApp</h3>
-          <p class="dir-desc">Sun'iy intellekt va talaba mobil ekotizimi</p>
-          <ul class="dir-pills">
-            <li>AI Professor</li>
-            <li>Chatbot</li>
-            <li>SuperApp</li>
-          </ul>
+        <div class="ai-mobile-role-actions">
+          <button type="button" class="ai-role-btn ai-role-btn--student" data-open-role-modal="student">
+            <span class="ai-role-btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6" />
+                <path d="M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3.3 0 6-1.3 6-3v-5" />
+              </svg>
+            </span>
+            <span class="ai-role-btn-label">Talaba</span>
+          </button>
+          <button type="button" class="ai-role-btn ai-role-btn--teacher" data-open-role-modal="teacher">
+            <span class="ai-role-btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </span>
+            <span class="ai-role-btn-label">O'qituvchi</span>
+          </button>
+          <button type="button" class="ai-role-btn ai-role-btn--leader" data-open-role-modal="leader">
+            <span class="ai-role-btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </span>
+            <span class="ai-role-btn-label">Rahbariyat</span>
+          </button>
         </div>
       </article>
     </div>
@@ -520,1329 +380,518 @@
       <div class="mgmt-orb mgmt-orb-2"></div>
     </div>
 
-    <div class="slide-label mgmt-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <rect x="3" y="3" width="7" height="9" rx="1" />
-        <rect x="14" y="3" width="7" height="5" rx="1" />
-        <rect x="14" y="12" width="7" height="9" rx="1" />
-        <rect x="3" y="16" width="7" height="5" rx="1" />
-      </svg>
-      Tizim tarkibi
-    </div>
-    <h2 class="slide-title">Boshqaruv modullari</h2>
-    <p class="mgmt-intro">Universitet faoliyatini to'liq qamrab oluvchi <strong>11 ta mustaqil modul</strong> yagona
-      integratsion platformada birlashadi.</p>
+    <div class="slide-label mgmt-label">Tizim arxitekturasi</div>
+    <h2 class="slide-title">Integrallashgan tizim arxitekturasi</h2>
 
-    <div class="mgmt-dashboard">
-      <!-- 1-Ustun: O'quv jarayoni va reyting -->
-      <div class="mgmt-col">
-        <div class="mgmt-col-header text-purple">
-          <span class="mgmt-col-dot dot-purple"></span>
-          O'quv jarayoni va reyting
-        </div>
-        <div class="mgmt-col-grid">
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-purple-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-                </svg>
-              </div>
-              <h4>Kafedralar va dars yuklamasi</h4>
-            </div>
-            <p>O'qituvchilarning dars soatlari va dars jadvallarini taqsimlash</p>
+    <div class="integr-arch-layout">
+      <section class="integr-arch-diagram">
+        <div class="integr-arch-stack">
+          <div class="integr-arch-line integr-arch-line--users">
+            <span>Talaba</span><span>O'qituvchi</span><span>Xodim</span><span>Rahbariyat</span>
           </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-purple-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" />
-                </svg>
-              </div>
-              <h4>O'qituvchilar reytingi (KPI)</h4>
-            </div>
-            <p>Professor-o'qituvchilar ish faoliyatini baholash va reytingi</p>
-          </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-purple-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                  <path d="M6 12v5c0 1.7 3.3 3 6 3s6-1.3 6-3v-5" />
-                </svg>
-              </div>
-              <h4>Bitiruvchilar bandligi</h4>
-            </div>
-            <p>Bitiruvchilar ish joylarini kuzatish va karyera tahlili</p>
-          </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-purple-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                  <rect width="8" height="4" x="8" y="2" rx="1" />
-                  <path d="m9 14 2 2 4-4" />
-                </svg>
-              </div>
-              <h4>Onlayn arizalar</h4>
-            </div>
-            <p>Talabalar va xodimlardan onlayn arizalar, ma'lumotnomalar olish</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- 2-Ustun: Moliya, kadrlar va xo'jalik -->
-      <div class="mgmt-col">
-        <div class="mgmt-col-header text-blue">
-          <span class="mgmt-col-dot dot-blue"></span>
-          Moliya, kadrlar va xo'jalik
-        </div>
-        <div class="mgmt-col-grid">
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-blue-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                </svg>
-              </div>
-              <h4>Byudjet va moliya</h4>
-            </div>
-            <p>Universitet daromadlari va xarajatlarini hisobga olish</p>
+          <div class="integr-arch-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
           </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-blue-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <h4>Kadrlar (HR) boshqaruvi</h4>
-            </div>
-            <p>Xodimlarning shaxsiy ishlari, buyruqlari va shtat jadvalleri</p>
-          </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-blue-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path
-                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                </svg>
-              </div>
-              <h4>Bino va jihozlar nazorati</h4>
-            </div>
-            <p>Auditoriyalar, omborlar, kompyuterlar va jihozlar hisobi</p>
-          </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-blue-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path
-                    d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" />
-                </svg>
-              </div>
-              <h4>Ilmiy loyihalar (Grantlar)</h4>
-            </div>
-            <p>Ilmiy grantlar, startaplar va tadqiqot loyihalarini kuzatish</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- 3-Ustun: Tahlil va raqamli hujjatlar -->
-      <div class="mgmt-col">
-        <div class="mgmt-col-header text-emerald">
-          <span class="mgmt-col-dot dot-emerald"></span>
-          Tahlil va raqamli hujjatlar
-        </div>
-        <div class="mgmt-col-grid">
-          <div class="mgmt-card card-featured">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-emerald-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-                </svg>
-              </div>
-              <h4>Yagona ma'lumotlar bazasi</h4>
+          <div class="integr-arch-modules">
+            <div class="integr-arch-module m1">
+              <strong>Smart Learning</strong>
+              <small>O'quv jarayonlari</small>
             </div>
-            <p>HEMIS, Moodle va boshqa tizimlarni birlashtiruvchi yagona yadro</p>
-          </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-emerald-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <path d="M14 2v6h6" />
-                  <path d="M16 13H8" />
-                  <path d="M16 17H8" />
-                  <path d="M10 9H8" />
-                </svg>
-              </div>
-              <h4>Hujjatlar (Qog'ozsiz EDMS)</h4>
+            <div class="integr-arch-module m2">
+              <strong>Smart Management</strong>
+              <small>Boshqaruv jarayonlari</small>
             </div>
-            <p>Ichki buyruqlar, bayonnomalar va xatlarni onlayn almashish</p>
-          </div>
-          <div class="mgmt-card">
-            <div class="mgmt-card-top">
-              <div class="mgmt-card-icon bg-emerald-low">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3" />
-                </svg>
-              </div>
-              <h4>Rektorat tahliliy paneli</h4>
+            <div class="integr-arch-module m3">
+              <strong>Smart Campus</strong>
+              <small>IoT va infratuzilma</small>
             </div>
-            <p>Universitetdagi barcha jarayonlarni onlayn ko'rsatuvchi yagona dashboard</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- ===== SLIDE 6 — SMART CAMPUS ===== -->
-  <div class="slide slide-campus">
-    <div class="campus-bg" aria-hidden="true">
-      <div class="campus-orb campus-orb-1"></div>
-      <div class="campus-orb campus-orb-2"></div>
-    </div>
 
-    <div class="slide-label campus-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-        <path d="M2 12h20" />
-      </svg>
-      Smart Campus
-    </div>
-    <h2 class="slide-title">Aqlli kampus modullari</h2>
+          <div class="integr-arch-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </div>
 
-    <div class="campus-grid">
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/smart_entry.png" alt="Smart kirish" loading="lazy">
+          <div class="integr-arch-line integr-arch-line--api">
+            <span>API Gateway</span><span>Auth & Role Access</span><span>AI Services</span><span>Notifications</span>
+          </div>
+
+          <div class="integr-arch-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </div>
+
+          <div class="integr-arch-core">
+            <strong>Yagona ma'lumotlar bazasi</strong>
+            <small>Master data, hujjatlar, jarayonlar, analitika va loglar</small>
+          </div>
+
+          <div class="integr-arch-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 5v14" />
+              <path d="m19 12-7 7-7-7" />
+            </svg>
+          </div>
+
+          <div class="integr-arch-line integr-arch-line--ext">
+            <span>HEMIS</span><span>Moodle</span><span>UzASBO 2</span><span>hrm.argos.uz</span><span>EDO.IJRO.UZ</span>
+          </div>
         </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="18" height="11" x="3" y="11" rx="2" />
-              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-            </svg></div>
-          <span>Smart kirish (FaceID/NFC/QR)</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/iot_monitoring.png" alt="Aqlli monitoring IoT" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
-              <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
-              <circle cx="12" cy="12" r="2" />
-              <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
-              <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19.1" />
-            </svg></div>
-          <span>Aqlli monitoring IoT</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/smart_parking.png" alt="Smart parking tizimi" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="18" height="18" x="3" y="3" rx="2" />
-              <path d="M9 17V7h4v10" />
-              <path d="M9 11h4" />
-            </svg></div>
-          <span>Smart parking tizimi</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/ai_surveillance.png" alt="AI video kuzatuv" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-              <rect x="2" y="6" width="14" height="12" rx="2" />
-            </svg></div>
-          <span>AI video kuzatuv</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/smart_location.png" alt="Smart Location" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg></div>
-          <span>Smart Location</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/temp_monitoring.png" alt="IoT harorat monitoringi" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
-            </svg></div>
-          <span>IoT harorat monitoringi</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/smart_transport.png" alt="Real-time transport" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M8 6v6" />
-              <path d="M15 6v6" />
-              <path d="M2 12h19.6" />
-              <path d="M18 18h3s.5-1 0-2-2-2-2-2" />
-              <path d="M3 18h3s-.5-1 0-2 2-2 2-2" />
-            </svg></div>
-          <span>Real-time transport</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/sos_emergency.png" alt="Favqulodda SOS tizimi" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon campus-card-alert"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
-              <path d="M12 9v4" />
-              <path d="M12 17h.01" />
-            </svg></div>
-          <span>Favqulodda SOS tizimi</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/event_management.png" alt="Smart event management" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="18" height="18" x="3" y="4" rx="2" />
-              <path d="M16 2v4" />
-              <path d="M8 2v4" />
-              <path d="M3 10h18" />
-            </svg></div>
-          <span>Smart event management</span>
-        </div>
-      </div>
-      <div class="campus-card">
-        <div class="campus-card-img-wrapper">
-          <img class="campus-card-img" src="images/digital_id.png" alt="Raqamli identifikatsiya" loading="lazy">
-        </div>
-        <div class="campus-card-body">
-          <div class="campus-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect width="20" height="14" x="2" y="5" rx="2" />
-              <path d="M2 10h20" />
-            </svg></div>
-          <span>Raqamli identifikatsiya</span>
-        </div>
-      </div>
+      </section>
+
+      <section class="integr-arch-side">
+        <article class="integr-arch-note note-teal">
+          <h3>Yagona kirish nuqtasi</h3>
+          <p>Mobil ilova va web kabinetlari barcha rollar uchun yagona platformaga ulanadi, ruxsatlar esa rol asosida boshqariladi.</p>
+        </article>
+        <article class="integr-arch-note note-amber">
+          <h3>Markaziy integratsiya</h3>
+          <p>Uchta asosiy tizim API gateway orqali tashqi tizimlar, AI servislar va yagona ma'lumotlar bazasi bilan bog'lanadi.</p>
+        </article>
+        <article class="integr-arch-note note-teal">
+          <h3>Analitika va nazorat</h3>
+          <p>Barcha jarayonlardan kelgan ma'lumotlar real vaqt dashboardi, KPI monitoringi va boshqaruv qarorlari uchun ishlatiladi.</p>
+        </article>
+      </section>
     </div>
   </div><!-- ===== SLIDE 8 — SMART LEARNING ===== -->
-  <div class="slide slide-learning">
+  <div class="slide slide-learning slide-learning-modules">
     <div class="learning-bg" aria-hidden="true">
       <div class="learning-orb learning-orb-1"></div>
       <div class="learning-orb learning-orb-2"></div>
       <div class="learning-orb learning-orb-3"></div>
     </div>
 
-    <div class="slide-label learning-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-        <path d="M6 12v5c3.3 0 6-1.3 6-3v-5" />
-      </svg>
-      Smart Learning
+    <div class="slide-label learning-label">Smart Learning</div>
+    <h2 class="slide-title">Smart Learning modullari</h2>
+
+    <div class="learning-mod-grid">
+      <article class="learning-mod-card c-teal">
+        <div class="learning-mod-index">01</div>
+        <h3>Akademik rejalashtirish</h3>
+        <p>O'quv rejalari, fanlar katalogi, ishchi dasturlar, professor-o'qituvchilar ish rejasi va o'quv yuklamalarini yagona bazada shakllantirish.</p>
+        <div class="learning-mod-tags"><span>O'quv reja</span><span>Fan katalogi</span><span>Yuklama</span></div>
+      </article>
+
+      <article class="learning-mod-card c-amber">
+        <div class="learning-mod-index">02</div>
+        <h3>Dars jadvali va auditoriya resurslari</h3>
+        <p>Dars jadvalini avtomatlashtirish, auditoriya bandligini nazorat qilish, guruh, fan va o'qituvchi kesimida ziddiyatlarni kamaytirish.</p>
+        <div class="learning-mod-tags"><span>Jadval</span><span>Auditoriya</span><span>Bandlik</span></div>
+      </article>
+
+      <article class="learning-mod-card c-teal">
+        <div class="learning-mod-index">03</div>
+        <h3>O'quv kontenti</h3>
+        <p>Fanlar bo'yicha ma'ruza matnlari, taqdimotlar, video darslar, topshiriqlar va mustaqil ta'lim materiallarini yagona elektron kutubxonada tartibli yuritish.</p>
+        <div class="learning-mod-tags"><span>Ma'ruza</span><span>Kontent</span><span>Video dars</span></div>
+      </article>
+
+      <article class="learning-mod-card c-red">
+        <div class="learning-mod-index">04</div>
+        <h3>Baholash va akademik nazorat</h3>
+        <p>Baholar qaydnomasi, davomat, oraliq va yakuniy nazorat natijalarini elektron yuritish hamda kafedra/dekanat tasdiqi jarayonlarini soddalashtirish.</p>
+        <div class="learning-mod-tags"><span>Baholash</span><span>Davomat</span><span>Nazorat</span></div>
+      </article>
+
+      <article class="learning-mod-card c-amber">
+        <div class="learning-mod-index">05</div>
+        <h3>Amaliyot va shartnomalar</h3>
+        <p>Talabalarni amaliyotga yuborish, korxonalar bilan shartnomalar biriktirilgan attestat va amaliyot natijalarini tizim orqali kuzatish.</p>
+        <div class="learning-mod-tags"><span>Amaliyot</span><span>Korxona</span><span>Shartnoma</span></div>
+      </article>
+
+      <article class="learning-mod-card c-teal">
+        <div class="learning-mod-index">06</div>
+        <h3>AI yordamchi va o'quv analitikasi</h3>
+        <p>AI professor, individual tavsiyalar, o'zlashtirish prognozi, xavf guruhidagi talabalarni aniqlash va rahbariyat uchun akademik dashboard.</p>
+        <div class="learning-mod-tags"><span>AI Professor</span><span>Prognoz</span><span>Dashboard</span></div>
+      </article>
     </div>
-    <h2 class="slide-title">O'quv jarayoni modullari</h2>
-
-    <p class="learning-intro">Raqamli ta'lim ekotizimi — <strong>11 ta mustaqil modul</strong>. Modulni bosing — tarkibi va
-      guruhlar ochiladi.</p>
-
-    <div class="learning-grid">
-      <button type="button" class="learning-card" data-module="lms" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-            <path d="M8 7h8" />
-            <path d="M8 11h8" />
-          </svg></div>
-        <span>LMS kurs boshqaruvi</span>
-      </button>
-      <button type="button" class="learning-card" data-module="hybrid" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect width="20" height="14" x="2" y="3" rx="2" />
-            <path d="M8 21h8" />
-            <path d="M12 17v4" />
-          </svg></div>
-        <span>Hybrid ta'lim tizimi</span>
-      </button>
-      <button type="button" class="learning-card" data-module="arvr" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z" />
-            <path d="M6 12h.01" />
-            <path d="M10 12h.01" />
-            <path d="M14 12h.01" />
-            <path d="M18 12h.01" />
-          </svg></div>
-        <span>AR/VR laboratoriyalar</span>
-      </button>
-      <button type="button" class="learning-card" data-module="conference" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-            <rect x="2" y="6" width="14" height="12" rx="2" />
-          </svg></div>
-        <span>Online konferensiya</span>
-      </button>
-      <button type="button" class="learning-card" data-module="exam" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <path d="M14 2v6h6" />
-            <path d="M16 13H8" />
-            <path d="M16 17H8" />
-            <path d="M10 9H8" />
-          </svg></div>
-        <span>Online test va imtihon</span>
-      </button>
-      <button type="button" class="learning-card learning-card--accent" data-module="proctoring" aria-haspopup="dialog">
-        <div class="learning-card-icon learning-card-icon-accent"><svg viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2">
-            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-            <circle cx="12" cy="12" r="3" />
-          </svg></div>
-        <span>AI exam proctoring</span>
-      </button>
-      <button type="button" class="learning-card" data-module="analytics" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 3v18h18" />
-            <path d="M18 17V9" />
-            <path d="M13 17V5" />
-            <path d="M8 17v-3" />
-          </svg></div>
-        <span>O'quv analitikasi</span>
-      </button>
-      <button type="button" class="learning-card" data-module="dlab" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 18h8" />
-            <path d="M3 22h18" />
-            <path d="M14 22a7 7 0 1 0 0-14h-1" />
-            <path d="M9 14h2" />
-            <path d="M9 10h2" />
-          </svg></div>
-        <span>Raqamli laboratoriya</span>
-      </button>
-      <button type="button" class="learning-card" data-module="library" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-          </svg></div>
-        <span>Elektron kutubxona</span>
-      </button>
-      <button type="button" class="learning-card" data-module="micro" aria-haspopup="dialog">
-        <div class="learning-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-            <path d="M4 22h16" />
-            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22" />
-            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22" />
-            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-          </svg></div>
-        <span>Mikro-kurslar va sertifikatlar</span>
-      </button>
-      <button type="button" class="learning-card learning-card--kredit" data-module="kredit" aria-haspopup="dialog">
-        <div class="learning-card-icon learning-card-icon-kredit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-            <path d="M6 12v5c3.3 0 6-1.3 6-3v-5" />
-          </svg></div>
-        <span>Kredit-modul</span>
-      </button>
+  </div><!-- ===== SLIDE 8 — SMART MANAGEMENT MODULLARI ===== -->
+  <div class="slide slide-management-modules">
+    <div class="mgmt-mod-bg" aria-hidden="true">
+      <div class="mgmt-mod-orb mgmt-mod-orb-1"></div>
+      <div class="mgmt-mod-orb mgmt-mod-orb-2"></div>
     </div>
 
-    <p class="learning-hint">Modul tugmasini bosing — modal oynada guruhlar va funksiyalar ro'yxati chiqadi</p>
+    <div class="mgmt-mod-inner">
+      <div class="slide-label mgmt-mod-label">Smart Management</div>
+      <h2 class="slide-title">Smart Management modullari</h2>
 
-    <div class="learning-modal" id="learningModal" hidden>
-      <div class="learning-modal-backdrop" data-close-modal></div>
-      <div class="learning-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="learningModalTitle">
-        <button type="button" class="learning-modal-close" data-close-modal aria-label="Yopish">&times;</button>
-        <h3 class="learning-modal-title" id="learningModalTitle"></h3>
-        <p class="learning-modal-desc"></p>
-        <div class="learning-modal-groups"></div>
+      <div class="learning-mod-grid">
+        <article class="learning-mod-card c-blue">
+          <div class="learning-mod-index">01</div>
+          <h3>Elektron hujjat aylanishi</h3>
+          <p>Buyruqlar, xizmat yozishmalari, topshiriqlar, kelishuv jarayonlari va ijro nazoratini yagona elektron workflow orqali yuritish.</p>
+          <div class="learning-mod-tags"><span>Buyruq</span><span>Ijro</span><span>Workflow</span></div>
+          <div class="learning-mod-watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </div>
+        </article>
+
+        <article class="learning-mod-card c-red">
+          <div class="learning-mod-index">02</div>
+          <h3>HR va xodimlar boshqaruvi</h3>
+          <p>Xodim profili, lavozim, mehnat faoliyati, ta'til, xizmat safari va ichki buyruqlarni HR tizimlari bilan bog'langan holda boshqarish.</p>
+          <div class="learning-mod-tags"><span>HR</span><span>Xodim</span><span>Ta'til</span></div>
+          <div class="learning-mod-watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </article>
+
+        <article class="learning-mod-card c-amber">
+          <div class="learning-mod-index">03</div>
+          <h3>Moliya va shartnomalar</h3>
+          <p>Fuqarolik-huquqiy shartnomalar, to'lov hujjatlari, xarajat so'rovlari va moliyaviy kelishuvlarni elektron tartibda nazorat qilish.</p>
+          <div class="learning-mod-tags"><span>Shartnoma</span><span>To'lov</span><span>UzASBO</span></div>
+          <div class="learning-mod-watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+        </article>
+
+        <article class="learning-mod-card c-teal">
+          <div class="learning-mod-index">04</div>
+          <h3>Resurs va ombor hisobi</h3>
+          <p>Tovar-moddiy boyliklarni qabul qilish, berish, inventarizatsiya, qoldiq nazorati va javobgar shaxslar kesimida hisob yuritish.</p>
+          <div class="learning-mod-tags"><span>Ombor</span><span>Inventar</span><span>Qoldiq</span></div>
+          <div class="learning-mod-watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+        </article>
+
+        <article class="learning-mod-card c-orange">
+          <div class="learning-mod-index">05</div>
+          <h3>Ariza va xizmatlar portali</h3>
+          <p>Talaba, xodim va fuqarolardan keladigan arizalarni qabul qilish, yo'naltirish, muddat bo'yicha nazorat qilish va natijasini kuzatish.</p>
+          <div class="learning-mod-tags"><span>Ariza</span><span>Xizmat</span><span>Nazorat</span></div>
+          <div class="learning-mod-watermark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </div>
+        </article>
+
+        <article class="learning-mod-card c-amber">
+          <div class="learning-mod-index">06</div>
+          <h3>Boshqaruv analitikasi</h3>
+          <p>Jarayonlar holati, KPI, ijro intizomi, resurslardan foydalanish va bo'limlar samaradorligini rahbariyat dashboardida ko'rsatish.</p>
+          <div class="learning-mod-tags"><span>KPI</span><span>Dashboard</span><span>Monitoring</span></div>
+          <div class="learning-mod-watermark learning-mod-watermark--text" aria-hidden="true">KPI</div>
+        </article>
       </div>
     </div>
-  </div><!-- ===== SLIDE 7 — AI & SUPERAPP ===== -->
-  <div class="slide slide-ai">
-    <div class="ai-bg" aria-hidden="true">
-      <div class="ai-orb ai-orb-1"></div>
-      <div class="ai-orb ai-orb-2"></div>
-      <div class="ai-orb ai-orb-3"></div>
+  </div><!-- ===== SLIDE 9 — SMART CAMPUS ===== -->
+  <div class="slide slide-campus slide-campus-modules">
+    <div class="campus-bg" aria-hidden="true">
+      <div class="campus-orb campus-orb-1"></div>
+      <div class="campus-orb campus-orb-2"></div>
+      <div class="campus-orb campus-orb-3"></div>
     </div>
 
-    <div class="slide-label ai-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M12 8V4H8" />
-        <rect width="16" height="12" x="4" y="8" rx="2" />
-        <path d="M2 14h2" />
-        <path d="M20 14h2" />
-        <path d="M15 13v2" />
-        <path d="M9 13v2" />
-      </svg>
-      AI &amp; SuperApp
+    <div class="campus-inner">
+      <div class="slide-label campus-label">
+        <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+          <path d="M2 12h20" />
+        </svg>
+        Smart Campus
+      </div>
+      <h2 class="slide-title">Smart Campus modullari</h2>
+
+      <div class="campus-grid">
+      <article class="campus-card accent-teal">
+        <div class="campus-card-index">01</div>
+        <h3>Smart kirish</h3>
+        <p>FaceID, QR va raqamli ruxsatnoma orqali kampusga kirish-chiqishni tezkor va xavfsiz nazorat qilish.</p>
+        <div class="campus-tags"><span>FaceID</span><span>QR</span><span>Access</span></div>
+      </article>
+
+      <article class="campus-card accent-teal">
+        <div class="campus-card-index">02</div>
+        <h3>Smart Parking</h3>
+        <p>Avtoturargoh bandligini, ruxsat etilgan transportlarni va kirish-chiqish oqimini raqamli boshqarish.</p>
+        <div class="campus-tags"><span>Parking</span><span>Bandlik</span><span>Ruxsat</span></div>
+      </article>
+
+      <article class="campus-card accent-blue">
+        <div class="campus-card-index">03</div>
+        <h3>AI video kuzatuv</h3>
+        <p>Kampus xavfsizligi, odamlar oqimi va favqulodda holatlarni AI asosida aniqlash va monitoring qilish.</p>
+        <div class="campus-tags"><span>AI Video</span><span>Xavfsizlik</span><span>Oqim</span></div>
+      </article>
+
+      <article class="campus-card accent-amber">
+        <div class="campus-card-index">04</div>
+        <h3>IoT harorat monitoringi</h3>
+        <p>Auditoriya, laboratoriya va TTJ xonalaridagi mikroiqlimni sensorlar orqali real vaqt rejimida kuzatish.</p>
+        <div class="campus-tags"><span>IoT</span><span>Harorat</span><span>Sensor</span></div>
+      </article>
+
+      <article class="campus-card accent-teal">
+        <div class="campus-card-index">05</div>
+        <h3>SOS tizimi</h3>
+        <p>Favqulodda vaziyatlarda tezkor signal yuborish, mas'ul xizmatchilarni ogohlantirish va hodisani kuzatish.</p>
+        <div class="campus-tags"><span>SOS</span><span>Signal</span><span>Tezkorlik</span></div>
+      </article>
+
+      <article class="campus-card accent-blue">
+        <div class="campus-card-index">06</div>
+        <h3>Raqamli identifikatsiya</h3>
+        <p>Talaba, xodim va mehmonlarni yagona raqamli profil orqali aniqlash, ruxsat va xizmatlarni personallashtirish.</p>
+        <div class="campus-tags"><span>ID</span><span>Profil</span><span>Ruxsat</span></div>
+      </article>
+
+      <article class="campus-card accent-teal">
+        <div class="campus-card-index">07</div>
+        <h3>Auditoriya va resurs monitoringi</h3>
+        <p>Auditoriyalar bandligi, jihozlar holati va o'quv resurslaridan foydalanishni markaziy kuzatish.</p>
+        <div class="campus-tags"><span>Auditoriya</span><span>Resurs</span><span>Bandlik</span></div>
+      </article>
+
+      <article class="campus-card accent-teal">
+        <div class="campus-card-index">08</div>
+        <h3>Universitet transporti nazorati</h3>
+        <p>Universitet transportlari yo'nalishi, yurilishi, harakat grafigi va foydalanish samaradorligini monitoring qilish.</p>
+        <div class="campus-tags"><span>Transport</span><span>GPS</span><span>Yo'nalish</span></div>
+      </article>
+      </div>
     </div>
-    <h2 class="slide-title">Sun'iy intellekt modullari</h2>
-
-    <p class="ai-intro">O'qitish, xavfsizlik va talaba hayoti — bitta <strong>SuperApp</strong> ichida</p>
-
-    <div class="ai-tags" aria-hidden="true">
-      <span>24/7 yordam</span>
-      <span>O'zbek tili</span>
-      <span>Real-vaqt</span>
-      <span>FaceID / QR</span>
-      <span>Dars jadvali AI</span>
+  </div><!-- ===== SLIDE 10 — ROLLAR MODELI ===== -->
+  <div class="slide slide-role-models">
+    <div class="role-models-bg" aria-hidden="true">
+      <div class="role-models-orb role-models-orb-1"></div>
+      <div class="role-models-orb role-models-orb-2"></div>
     </div>
 
-    <div class="ai-grid-wrap">
-      <div class="ai-group">
-        <div class="ai-grid">
-          <div class="ai-card ai-card--violet">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                <path d="M6 12v5c0 1.7 3.3 3 6 3s6-1.3 6-3v-5" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                  <path d="M6 12v5c0 1.7 3.3 3 6 3s6-1.3 6-3v-5" />
-                </svg></div>
-              <span>AI Professor</span>
-              <p class="ai-card-desc">Talabalarga 24/7 ma'lumot berish, topshiriqlarni baholash va fanlar bo'yicha shaxsiy repetitorlik qilish.</p>
-            </div>
+    <div class="role-models-inner">
+      <div class="slide-label role-models-label">Rollar modeli</div>
+      <h2 class="slide-title">Platformadagi asosiy rollar</h2>
+
+      <div class="role-models-grid">
+      <article class="role-models-col accent-teal">
+        <div class="role-models-index">01</div>
+        <h3>Smart Learning</h3>
+        <div class="role-models-list">
+          <button type="button" data-open-role-model="student">Talaba</button><button type="button" data-open-role-model="teacher">Professor-o'qituvchi</button>
+          <button type="button" data-open-role-model="head-department">Kafedra mudiri</button><button type="button" data-open-role-model="dean">Dekan / Dekanat</button>
+          <button type="button" data-open-role-model="registrar">Registrator ofisi</button><button type="button" data-open-role-model="practice-coordinator">Amaliyot koordinatori</button>
+          <button type="button" data-open-role-model="academic-admin">Akademik administrator</button><button type="button" data-open-role-model="academic-analyst">O'quv analitigi</button>
+        </div>
+      </article>
+
+      <article class="role-models-col accent-amber">
+        <div class="role-models-index">02</div>
+        <h3>Smart Management</h3>
+        <div class="role-models-list">
+          <button type="button" data-open-role-model="rectorate">Rektorat</button><button type="button" data-open-role-model="executive-lead">Mas'ul rahbar</button>
+          <button type="button" data-open-role-model="department-staff">Bo'lim xodimi</button><button type="button" data-open-role-model="office">Devonxona</button>
+          <button type="button" data-open-role-model="hr-specialist">HR mutaxassisi</button><button type="button" data-open-role-model="finance">Moliya / Buxgalteriya</button>
+          <button type="button" data-open-role-model="warehouse-manager">Ombor mudiri</button><button type="button" data-open-role-model="archive-officer">Arxiv mas'uli</button>
+        </div>
+      </article>
+
+      <article class="role-models-col accent-teal">
+        <div class="role-models-index">03</div>
+        <h3>Smart Campus</h3>
+        <div class="role-models-list">
+          <button type="button" data-open-role-model="security-service">Xavfsizlik xizmati</button><button type="button" data-open-role-model="campus-admin">Campus administrator</button>
+          <button type="button" data-open-role-model="ttj-manager">TTJ mas'uli</button><button type="button" data-open-role-model="parking-operator">Parking operatori</button>
+          <button type="button" data-open-role-model="iot-operator">IoT operatori</button><button type="button" data-open-role-model="transport-dispatcher">Transport dispetcheri</button>
+          <button type="button" data-open-role-model="technical-service">Texnik xizmat</button><button type="button" data-open-role-model="system-admin">Tizim administratori</button>
+        </div>
+      </article>
+      </div>
+    </div>
+  </div><!-- ===== SLIDE 10 — ROLLAR MODELI ===== -->
+  <div class="slide slide-results">
+    <div class="results-bg" aria-hidden="true">
+      <div class="results-orb results-orb-1"></div>
+      <div class="results-orb results-orb-2"></div>
+    </div>
+
+    <div class="results-inner">
+      <div class="slide-label results-label">Kutilayotgan natijalar</div>
+      <h2 class="slide-title">Amaliy natijalar</h2>
+
+      <div class="results-layout">
+        <article class="results-hero-card">
+          <div class="results-hero-index">01</div>
+          <h3>Yagona raqamli boshqaruv modeli</h3>
+          <p>Smart Learning, Smart Management va Smart Campus yagona platformada birlashtiriladi. Talaba, o'qituvchi, xodim va rahbariyat uchun yagona kirish, bitta ma'lumotlar modeli va markaziy boshqaruv mexanizmi shakllanadi.</p>
+        </article>
+
+        <div class="results-cards">
+          <article class="results-card">
+            <h4>Operatsion samaradorlik</h4>
+            <p>Qo'lda kiritish va takroriy hujjatlar kamayadi, jarayonlar tezlasadi va nazorat kuchayadi.</p>
+            <span class="results-tag">Tezlik + nazorat</span>
+          </article>
+
+          <article class="results-card">
+            <h4>Ta'lim sifati</h4>
+            <p>Akademik jarayonlar AI yordamchi, individual tavsiya va o'quv analitikasi bilan boyitiladi.</p>
+            <span class="results-tag">Student success</span>
+          </article>
+
+          <article class="results-card">
+            <h4>Integratsiya tayyorligi</h4>
+            <p>HEMIS, Moodle, UzASBO, hrm.argos.uz, EDO.IJRO.UZ bilan API asosida ulanish imkoniyati yaratiladi.</p>
+            <span class="results-tag">Scalable platform</span>
+          </article>
+
+          <article class="results-card">
+            <h4>Shaffof boshqaruv</h4>
+            <p>KPI, ijro intizomi va resurslardan foydalanish real vaqt dashboard orqali kuzatiladi.</p>
+            <span class="results-tag">Real-time monitoring</span>
+          </article>
+
+          <article class="results-card">
+            <h4>Campus xavfsizligi</h4>
+            <p>FaceID, QR, AI video kuzatuv va SOS mexanizmlari orqali kampus xavfsizligi mustahkamlanadi.</p>
+            <span class="results-tag">Smart infrastructure</span>
+          </article>
+
+          <article class="results-card">
+            <h4>Investitsion jozibadorlik</h4>
+            <p>Universitet raqamli transformatsiya, xalqaro reytinglar va uzoq muddatli qiymat yaratishga tayyorlanadi.</p>
+            <span class="results-tag">Long-term value</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div><!-- ===== SLIDE 11 — AMALIY NATIJALAR ===== -->
+  <div class="slide slide-transform">
+    <div class="transform-bg" aria-hidden="true">
+      <div class="transform-orb transform-orb-1"></div>
+      <div class="transform-orb transform-orb-2"></div>
+    </div>
+
+    <div class="transform-inner">
+      <div class="slide-label transform-label">Natijalar diagrammasi</div>
+      <h2 class="slide-title">Transformatsiya xaritasi</h2>
+
+      <div class="transform-top">
+        <article class="transform-phase accent-red">
+          <span class="transform-phase-kicker">Bugungi holat</span>
+          <h3>Tarqoq jarayonlar</h3>
+          <p>Excel fayllar, qog'oz hujjatlar va alohida tizimlar sabab ma'lumotlar bir necha joyda yuritiladi.</p>
+          <div class="transform-phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+              <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+            </svg>
           </div>
-          <div class="ai-card ai-card--indigo">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                </svg></div>
-              <span>AI Chatbot</span>
-              <p class="ai-card-desc">Universitet saytida abituriyentlar va talabalar uchun yagona tezkor ma'lumot beruvchi maslahatchi.</p>
-            </div>
+        </article>
+
+        <article class="transform-phase accent-amber">
+          <span class="transform-phase-kicker">Platforma yechimi</span>
+          <h3>Yagona raqamli muhit</h3>
+          <p>Smart Learning, Smart Management va Smart Campus modullari yagona baza hamda API integratsiya orqali bog'lanadi.</p>
+          <div class="transform-phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
           </div>
-          <div class="ai-card ai-card--blue">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.3-4.3" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8" />
-                  <path d="m21 21-4.3-4.3" />
-                </svg></div>
-              <span>AI plagiat aniqlash</span>
-              <p class="ai-card-desc">Talabalar kurs ishlari va mustaqil ishlarining o'ziga xosligini real vaqtda avtomatik tekshirish.</p>
-            </div>
+        </article>
+
+        <article class="transform-phase accent-green">
+          <span class="transform-phase-kicker">Kutiladigan natija</span>
+          <h3>Shaffof boshqaruv</h3>
+          <p>Rahbariyat, dekanat, bo'limlar va xizmatlar jarayon holatini yagona dashboard orqali kuzatadi.</p>
+          <div class="transform-phase-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
           </div>
-          <div class="ai-card ai-card--cyan">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        </article>
+      </div>
+
+      <div class="transform-bottom">
+        <div class="transform-steps">
+          <article class="transform-step accent-green">
+            <div class="transform-step-index">01</div>
+            <div class="transform-step-body">
+              <h4>Qog'ozga bog'liqlik kamayadi</h4>
+              <p>Ariza, buyruq, tanishtirish, shartnoma va arxiv jarayonlari elektron workflowga o'tadi.</p>
+            </div>
+            <div class="transform-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                <path d="m9 15 2 2 4-4" />
+              </svg>
+            </div>
+          </article>
+
+          <article class="transform-step accent-amber">
+            <div class="transform-step-index">02</div>
+            <div class="transform-step-body">
+              <h4>Takroriy kiritish kamayadi</h4>
+              <p>Talaba, xodim, fan, hujjat va resurs ma'lumotlari yagona master data asosida ishlatiladi.</p>
+            </div>
+            <div class="transform-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="10" />
-                <circle cx="12" cy="12" r="6" />
-                <circle cx="12" cy="12" r="2" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <circle cx="12" cy="12" r="6" />
-                  <circle cx="12" cy="12" r="2" />
-                </svg></div>
-              <span>AI karera maslahat</span>
-              <p class="ai-card-desc">Talabaning natijalariga qarab unga mos kasbiy yo'nalishlar va vakansiyalarni tavsiya etish.</p>
+                <path d="M12 2v20M2 12h20" />
+              </svg>
             </div>
-          </div>
-          <div class="ai-card ai-card--emerald">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg></div>
-              <span>AI xavfsizlik analitikasi</span>
-              <p class="ai-card-desc">Kiberhujumlar va shubhali harakatlarni real vaqtda aniqlab, ma'lumotlar xavfsizligini ta'minlash.</p>
+          </article>
+
+          <article class="transform-step accent-teal">
+            <div class="transform-step-index">03</div>
+            <div class="transform-step-body">
+              <h4>Real vaqt monitoringi kuchayadi</h4>
+              <p>Ijro, akademik jarayon, TTJ, ombor, xavfsizlik va campus resurslari dashboardda ko'rinadi.</p>
             </div>
-          </div>
-          <div class="ai-card ai-card--fuchsia">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
-                </svg></div>
-              <span>AI universitet bilim bazasi</span>
-              <p class="ai-card-desc">Universitetning barcha ichki hujjatlari, kutubxona va darsliklarini yagona AI qidiruvga birlashtirish.</p>
+            <div class="transform-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 3v18h18" />
+                <path d="M7 16v-4M12 16V8M17 16v-6" />
+              </svg>
             </div>
-          </div>
-          <div class="ai-card ai-card--sky">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect width="18" height="18" x="3" y="4" rx="2" />
-                <path d="M16 2v4M8 2v4M3 10h18" />
-                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect width="18" height="18" x="3" y="4" rx="2" />
-                  <path d="M16 2v4M8 2v4M3 10h18" />
-                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01" />
-                </svg></div>
-              <span>AI dars jadvali rejalashtirish</span>
-              <p class="ai-card-desc">O'quv yiliga dars jadvalini AI tuzadi: qaysi fan, qaysi auditoriya va soat; tavsiya tizimi bilan 1 yillik to'liq reja.</p>
+          </article>
+
+          <article class="transform-step accent-red">
+            <div class="transform-step-index">04</div>
+            <div class="transform-step-body">
+              <h4>Servis sifati yaxshilanadi</h4>
+              <p>Talaba va xodimlar mobil ilova, chatbot va shaxsiy kabinet orqali xizmatlardan tezroq foydalanadi.</p>
             </div>
-          </div>
+            <div class="transform-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 11h3l2-7h8l2 7h3v2H3z" />
+                <path d="M7 18a2 2 0 1 0 4 0M13 18a2 2 0 1 0 4 0" />
+              </svg>
+            </div>
+          </article>
         </div>
-      </div>
 
-      <div class="ai-group ai-group-app">
-        <div class="ai-grid ai-grid-app">
-          <div class="ai-card ai-card--rose">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect width="14" height="20" x="5" y="2" rx="2" />
-                <path d="M12 18h.01" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect width="14" height="20" x="5" y="2" rx="2" />
-                  <path d="M12 18h.01" />
-                </svg></div>
-              <span>SuperApp — QR/FaceID kirish</span>
-              <p class="ai-card-desc">Smart-kartasiz, faqat yuzni tanish yoki tezkor QR kod orqali universitet hududiga va darslarga kirish.</p>
-            </div>
+        <aside class="transform-eval">
+          <div class="transform-eval-box">
+            <span class="transform-eval-label label-red">Asos</span>
+            <p>Foizli baho emas, jarayonlar kesimidagi sifat o'zgarishi ko'rsatilmoqda</p>
           </div>
-          <div class="ai-card ai-card--amber">
-            <div class="ai-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect width="20" height="14" x="2" y="5" rx="2" />
-                <path d="M2 10h20" />
-              </svg></div>
-            <div class="ai-card-body">
-              <div class="ai-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect width="20" height="14" x="2" y="5" rx="2" />
-                  <path d="M2 10h20" />
-                </svg></div>
-              <span>Moliyaviy tahlil</span>
-              <p class="ai-card-desc">Universitet byudjeti, kontrakt to'lovlari va xarajatlarini real vaqtda tahlil qiluvchi dashboard.</p>
-            </div>
+          <span class="transform-eval-arrow" aria-hidden="true">→</span>
+          <div class="transform-eval-box">
+            <span class="transform-eval-label label-green">Baholash mezoni</span>
+            <p>Qog'ozdan elektron workflowga o'tish, integratsiya va monitoring mavjudligi</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div><!-- ===== SLIDE 12 — SUPERAPP ROLLAR ===== -->
-  <div class="slide slide-roles">
-    <div class="roles-bg" aria-hidden="true">
-      <div class="roles-orb roles-orb-1"></div>
-      <div class="roles-orb roles-orb-2"></div>
-      <div class="roles-orb roles-orb-3"></div>
-    </div>
-
-    <div class="slide-label roles-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <rect width="14" height="20" x="5" y="2" rx="2" />
-        <path d="M12 18h.01" />
-      </svg>
-      SuperApp
-    </div>
-    <h2 class="slide-title">Kimlar foydalanadi?</h2>
-
-    <p class="roles-intro">Bitta ilova — <strong>4 ta foydalanuvchi guruhi</strong> uchun moslashtirilgan interfeys</p>
-
-    <div class="roles-visual">
-      <figure class="roles-banner-wrap">
-        <video class="roles-banner-video" src="videos/roles-banner.mp4" muted loop playsinline preload="auto"
-          aria-label="Talaba, O'qituvchi, Rahbar va Mijoz — SuperApp foydalanuvchi turlari"></video>
-      </figure>
-
-      <div class="roles-legend">
-        <button type="button" class="roles-legend-item roles-legend-student" data-open-role-modal="student">
-          <span class="roles-legend-dot"></span>
-          <div>
-            <strong>Talaba</strong>
-            <p>Jadval, baholar, LMS, TTJ, to'lov</p>
-            <span class="roles-legend-hint">Bosing — batafsil</span>
-          </div>
-        </button>
-        <button type="button" class="roles-legend-item roles-legend-teacher" data-open-role-modal="teacher">
-          <span class="roles-legend-dot"></span>
-          <div>
-            <strong>O'qituvchi</strong>
-            <p>Reja, baholash, davomat, LMS</p>
-            <span class="roles-legend-hint">Bosing — batafsil</span>
-          </div>
-        </button>
-        <button type="button" class="roles-legend-item roles-legend-leader" data-open-role-modal="leader">
-          <span class="roles-legend-dot"></span>
-          <div>
-            <strong>Rahbar</strong>
-            <p>KPI, dashboard, analitika, buyruq</p>
-            <span class="roles-legend-hint">Bosing — batafsil</span>
-          </div>
-        </button>
-        <button type="button" class="roles-legend-item roles-legend-customer" data-open-role-modal="customer">
-          <span class="roles-legend-dot"></span>
-          <div>
-            <strong>Mijoz</strong>
-            <p>Ota-ona, hamkor, abituriyent, aloqa</p>
-            <span class="roles-legend-hint">Bosing — batafsil</span>
-          </div>
-        </button>
+        </aside>
       </div>
     </div>
   </div>
 
-  <div class="slide slide-arch">
-    <div class="arch-bg" aria-hidden="true">
-      <div class="arch-orb arch-orb-1"></div>
-      <div class="arch-orb arch-orb-2"></div>
-    </div>
-
-    <div class="slide-label arch-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M2 20h20" />
-        <path d="M5 20V8l7-4 7 4v12" />
-        <path d="M9 20v-6h6v6" />
-      </svg>
-      Arxitektura
-    </div>
-    <h2 class="slide-title">Yagona platforma arxitekturasi</h2>
-    <p class="arch-intro">Microservices yondashuv — <strong>bitta markaziy baza</strong>, ko'p modul va kanal</p>
-
-    <div class="arch-main">
-      <div class="arch-diagram-wrap" role="img" aria-label="Smart University platforma arxitekturasi: 4 foydalanuvchi roli, kirish kanallari, API Gateway, microservices, Data Core va tashqi integratsiyalar">
-        <svg class="arch-svg" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="archGradUsers" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22" />
-              <stop offset="100%" stop-color="#312e81" stop-opacity="0.1" />
-            </linearGradient>
-            <linearGradient id="archGradClient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.22" />
-              <stop offset="100%" stop-color="#1e3a8a" stop-opacity="0.12" />
-            </linearGradient>
-            <linearGradient id="archGradApi" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.3" />
-              <stop offset="100%" stop-color="#0e7490" stop-opacity="0.15" />
-            </linearGradient>
-            <linearGradient id="archGradSvc" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#475569" stop-opacity="0.32" />
-              <stop offset="100%" stop-color="#0f172a" stop-opacity="0.18" />
-            </linearGradient>
-            <linearGradient id="archGradCore" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.5" />
-              <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.28" />
-            </linearGradient>
-            <linearGradient id="archGradExt" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f97316" stop-opacity="0.22" />
-              <stop offset="100%" stop-color="#9a3412" stop-opacity="0.1" />
-            </linearGradient>
-            <linearGradient id="archArrowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25" />
-              <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0.85" />
-            </linearGradient>
-            <linearGradient id="archIconBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#60a5fa" /><stop offset="100%" stop-color="#2563eb" />
-            </linearGradient>
-            <linearGradient id="archIconCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#67e8f9" /><stop offset="100%" stop-color="#0891b2" />
-            </linearGradient>
-            <linearGradient id="archIconViolet" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#d8b4fe" /><stop offset="100%" stop-color="#7c3aed" />
-            </linearGradient>
-            <linearGradient id="archIconGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#6ee7b7" /><stop offset="100%" stop-color="#059669" />
-            </linearGradient>
-            <linearGradient id="archIconAmber" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fcd34d" /><stop offset="100%" stop-color="#d97706" />
-            </linearGradient>
-            <linearGradient id="archIconPink" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#f9a8d4" /><stop offset="100%" stop-color="#db2777" />
-            </linearGradient>
-            <linearGradient id="archIconOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fb923c" /><stop offset="100%" stop-color="#c2410c" />
-            </linearGradient>
-            <filter id="archGlow" x="-15%" y="-15%" width="130%" height="130%">
-              <feGaussianBlur stdDeviation="5" result="blur" />
-              <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-            </filter>
-            <marker id="archArrowHead" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
-              <path d="M0,0 L9,4.5 L0,9 Z" fill="#c4b5fd" />
-            </marker>
-          </defs>
-
-          <!-- ===== L1: FOYDALANUVCHILAR — 4 ROL ===== -->
-          <g class="arch-svg-layer arch-svg-layer--users">
-            <rect class="arch-svg-panel" x="20" y="10" width="1160" height="90" rx="16" fill="url(#archGradUsers)" stroke="rgba(165,180,252,0.35)" stroke-width="1.4" />
-            <text class="arch-svg-tag" x="40" y="34">Foydalanuvchilar · 4 rol</text>
-
-            <g transform="translate(180,58)">
-              <circle r="20" fill="url(#archIconViolet)" />
-              <g stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                <path d="M-11 -2 L0 -8 L11 -2 L0 4 Z" />
-                <path d="M-7 1 V5 C-7 6.5 -3 8 0 8 C3 8 7 6.5 7 5 V1" />
-              </g>
-              <text class="arch-svg-label" x="0" y="86" text-anchor="middle">Talaba</text>
-            </g>
-
-            <g transform="translate(460,58)">
-              <circle r="20" fill="url(#archIconGreen)" />
-              <g stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                <path d="M-9 -8 H5 V8 H-5 A4 4 0 0 1 -9 4 Z" />
-                <path d="M-9 -3 H5" />
-              </g>
-              <text class="arch-svg-label" x="0" y="86" text-anchor="middle">O'qituvchi</text>
-            </g>
-
-            <g transform="translate(740,58)">
-              <circle r="20" fill="url(#archIconAmber)" />
-              <g stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                <path d="M-9 8 H9" />
-                <path d="M-9 -7 L-5 -3 L-1 -9 L3 -3 L7 -7 L5 8 H-7 Z" />
-              </g>
-              <text class="arch-svg-label" x="0" y="86" text-anchor="middle">Rahbar</text>
-            </g>
-
-            <g transform="translate(1020,58)">
-              <circle r="20" fill="url(#archIconPink)" />
-              <g stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                <circle cx="0" cy="-3" r="5" />
-                <path d="M-9 10 C-9 5 -4 2 0 2 C4 2 9 5 9 10" />
-              </g>
-              <text class="arch-svg-label" x="0" y="86" text-anchor="middle">Mijoz</text>
-            </g>
-          </g>
-
-          <!-- L1 -> L2 arrows -->
-          <g class="arch-svg-flow">
-            <line class="arch-svg-arrow" x1="180" y1="100" x2="180" y2="118" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-            <line class="arch-svg-arrow" x1="460" y1="100" x2="460" y2="118" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-            <line class="arch-svg-arrow" x1="740" y1="100" x2="740" y2="118" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-            <line class="arch-svg-arrow" x1="1020" y1="100" x2="1020" y2="118" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-          </g>
-
-          <!-- ===== L2: KIRISH KANALLARI ===== -->
-          <g class="arch-svg-layer arch-svg-layer--client">
-            <rect class="arch-svg-panel" x="20" y="118" width="1160" height="70" rx="16" fill="url(#archGradClient)" stroke="rgba(147,197,253,0.4)" stroke-width="1.4" />
-            <text class="arch-svg-tag" x="40" y="140">Kirish kanallari</text>
-
-            <g transform="translate(180,164)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(56,189,248,0.14)" stroke="rgba(125,211,252,0.45)" stroke-width="1.2" />
-              <g transform="translate(-70,0)" stroke="#bae6fd" stroke-width="1.8" stroke-linecap="round" fill="none">
-                <rect x="-6" y="-10" width="12" height="20" rx="2.5" />
-                <circle cx="0" cy="7" r="1.2" fill="#bae6fd" stroke="none" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#e0f2fe" font-size="14" font-weight="700">SuperApp Mobile</text>
-            </g>
-
-            <g transform="translate(460,164)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(56,189,248,0.14)" stroke="rgba(125,211,252,0.45)" stroke-width="1.2" />
-              <g transform="translate(-70,0)" stroke="#bae6fd" stroke-width="1.6" fill="none">
-                <circle cx="0" cy="0" r="10" />
-                <path d="M-10 0 H10 M0 -10 V10" />
-                <ellipse cx="0" cy="0" rx="5" ry="10" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#e0f2fe" font-size="14" font-weight="700">Web Portal</text>
-            </g>
-
-            <g transform="translate(740,164)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(56,189,248,0.14)" stroke="rgba(125,211,252,0.45)" stroke-width="1.2" />
-              <g transform="translate(-70,0)" stroke="#bae6fd" stroke-width="1.8" stroke-linecap="round" fill="none">
-                <rect x="-10" y="-8" width="20" height="14" rx="1.5" />
-                <path d="M-6 10 H6 M0 6 V10" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#e0f2fe" font-size="14" font-weight="700">Admin Dashboard</text>
-            </g>
-
-            <g transform="translate(1020,164)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(56,189,248,0.14)" stroke="rgba(125,211,252,0.45)" stroke-width="1.2" />
-              <g transform="translate(-70,0)" stroke="#bae6fd" stroke-width="1.8" stroke-linejoin="round" fill="none">
-                <path d="M-10 -2 L10 -9 L7 9 L1 4 L-3 8 L-3 4 Z" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#e0f2fe" font-size="14" font-weight="700">Telegram Bot</text>
-            </g>
-          </g>
-
-          <!-- L2 -> L3 arrow -->
-          <g class="arch-svg-flow">
-            <line class="arch-svg-arrow" x1="600" y1="188" x2="600" y2="206" stroke="url(#archArrowGrad)" stroke-width="3" marker-end="url(#archArrowHead)" />
-          </g>
-
-          <!-- ===== L3: API GATEWAY · XAVFSIZLIK ===== -->
-          <g class="arch-svg-layer arch-svg-layer--api">
-            <rect class="arch-svg-panel" x="20" y="206" width="1160" height="80" rx="16" fill="url(#archGradApi)" stroke="rgba(125,211,252,0.55)" stroke-width="1.7" filter="url(#archGlow)" />
-            <text class="arch-svg-tag" x="40" y="228">API Gateway · Xavfsizlik</text>
-
-            <g transform="translate(92,256)">
-              <circle r="22" fill="url(#archIconCyan)" />
-              <g stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none">
-                <path d="M0 -12 L-9 -7 V1 C-9 7 -4 11 0 12 C4 11 9 7 9 1 V-7 Z" />
-                <path d="M-3 0 L-1 3 L4 -3" />
-              </g>
-            </g>
-
-            <g transform="translate(225,256)">
-              <rect x="-72" y="-15" width="144" height="30" rx="8" fill="rgba(56,189,248,0.2)" stroke="rgba(125,211,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#bae6fd" font-size="13" font-weight="700">JWT Auth</text>
-            </g>
-            <g transform="translate(385,256)">
-              <rect x="-72" y="-15" width="144" height="30" rx="8" fill="rgba(56,189,248,0.2)" stroke="rgba(125,211,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#bae6fd" font-size="13" font-weight="700">RBAC</text>
-            </g>
-            <g transform="translate(545,256)">
-              <rect x="-72" y="-15" width="144" height="30" rx="8" fill="rgba(56,189,248,0.2)" stroke="rgba(125,211,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#bae6fd" font-size="13" font-weight="700">2FA</text>
-            </g>
-            <g transform="translate(705,256)">
-              <rect x="-72" y="-15" width="144" height="30" rx="8" fill="rgba(56,189,248,0.2)" stroke="rgba(125,211,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#bae6fd" font-size="13" font-weight="700">Audit Log</text>
-            </g>
-            <g transform="translate(865,256)">
-              <rect x="-72" y="-15" width="144" height="30" rx="8" fill="rgba(56,189,248,0.2)" stroke="rgba(125,211,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#bae6fd" font-size="13" font-weight="700">Rate Limit</text>
-            </g>
-            <g transform="translate(1025,256)">
-              <rect x="-72" y="-15" width="144" height="30" rx="8" fill="rgba(56,189,248,0.2)" stroke="rgba(125,211,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#bae6fd" font-size="13" font-weight="700">WAF</text>
-            </g>
-          </g>
-
-          <!-- L3 -> L4 arrow -->
-          <g class="arch-svg-flow">
-            <line class="arch-svg-arrow" x1="600" y1="286" x2="600" y2="304" stroke="url(#archArrowGrad)" stroke-width="3" marker-end="url(#archArrowHead)" />
-          </g>
-
-          <!-- ===== L4: BUSINESS SERVICES (12 MICROSERVICES) ===== -->
-          <g class="arch-svg-layer arch-svg-layer--svc">
-            <rect class="arch-svg-panel" x="20" y="304" width="1160" height="190" rx="16" fill="url(#archGradSvc)" stroke="rgba(148,163,184,0.42)" stroke-width="1.4" />
-            <text class="arch-svg-tag" x="40" y="326">Business Services · Microservices</text>
-
-            <!-- ROW 1 -->
-            <g transform="translate(40,346)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconGreen)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M-7 -6 H7 V6 H-7 Z" />
-                <path d="M-5 -3 H5 M-5 0 H5 M-5 3 H2" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">LMS · O'quv</text>
-            </g>
-            <g transform="translate(324,346)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconViolet)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round">
-                <rect x="-6" y="-6" width="12" height="12" rx="1.5" />
-                <circle cx="0" cy="0" r="2.5" />
-                <path d="M-4 -8 V-6 M0 -8 V-6 M4 -8 V-6 M-4 6 V8 M0 6 V8 M4 6 V8 M-8 -4 H-6 M-8 0 H-6 M-8 4 H-6 M6 -4 H8 M6 0 H8 M6 4 H8" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">AI Engine</text>
-            </g>
-            <g transform="translate(608,346)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconAmber)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <path d="M-7 6 H7" />
-                <path d="M-5 4 V-1" /><path d="M-1 4 V-4" /><path d="M3 4 V-2" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">KPI Dashboard</text>
-            </g>
-            <g transform="translate(892,346)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconCyan)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round">
-                <circle cx="-3" cy="-3" r="3" />
-                <circle cx="4" cy="-2" r="2.5" />
-                <path d="M-8 6 C-8 3 -6 1 -3 1 C0 1 2 3 2 6" />
-                <path d="M2 6 C2 3 4 1 4 1 C6 1 8 3 8 5" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">HR · Xodim</text>
-            </g>
-
-            <!-- ROW 2 -->
-            <g transform="translate(40,395)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconBlue)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <rect x="-8" y="-5" width="16" height="11" rx="1.5" />
-                <path d="M-8 -1 H8" /><path d="M-6 3 H-2" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">Kredit-modul</text>
-            </g>
-            <g transform="translate(324,395)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconPink)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M-8 -6 H8 V3 H-2 L-6 7 V3 H-8 Z" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">Murojaat · Ticket</text>
-            </g>
-            <g transform="translate(608,395)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconOrange)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M-6 -8 H4 L8 -4 V8 H-6 Z" />
-                <path d="M-4 -2 H6 M-4 1 H6 M-4 4 H2" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">Buyruq · EDMS</text>
-            </g>
-            <g transform="translate(892,395)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconViolet)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M-6 -2 C-6 -7 -3 -10 0 -10 C3 -10 6 -7 6 -2 V3 L7 5 H-7 L-6 3 Z" />
-                <path d="M-2 6 C-2 7 -1 8 0 8 C1 8 2 7 2 6" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">Push · Notification</text>
-            </g>
-
-            <!-- ROW 3 -->
-            <g transform="translate(40,444)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconCyan)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M-8 0 L0 -8 L8 0 V8 H-8 Z" />
-                <path d="M-2 8 V3 H2 V8" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">TTJ · Kampus</text>
-            </g>
-            <g transform="translate(324,444)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconAmber)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <path d="M-6 -8 V8" />
-                <path d="M-9 -8 V-3 C-9 -1.5 -7.5 0 -6 0" />
-                <path d="M-3 -8 V-3 C-3 -1.5 -4.5 0 -6 0" />
-                <path d="M6 -8 C4 -8 3 -6 3 -3 V0 H6 V8" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">Ovqat · Buyurtma</text>
-            </g>
-            <g transform="translate(608,444)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconGreen)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <rect x="-9" y="-5" width="18" height="11" rx="1.5" />
-                <circle cx="5" cy="0" r="1.6" fill="#fff" stroke="none" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">To'lov · Payment</text>
-            </g>
-            <g transform="translate(892,444)">
-              <rect width="268" height="40" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(148,163,184,0.32)" stroke-width="1" />
-              <circle cx="24" cy="20" r="13" fill="url(#archIconBlue)" />
-              <g transform="translate(24,20)" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M-6 -8 H4 L8 -4 V8 H-6 Z" />
-                <path d="M-3 4 L-1 6 L4 1" />
-              </g>
-              <text x="48" y="25" fill="#fff" font-size="13.5" font-weight="700">Didox · E-imzo</text>
-            </g>
-          </g>
-
-          <!-- L4 -> L5 arrows -->
-          <g class="arch-svg-flow">
-            <line class="arch-svg-arrow" x1="174" y1="494" x2="174" y2="512" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-            <line class="arch-svg-arrow" x1="458" y1="494" x2="458" y2="512" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-            <line class="arch-svg-arrow" x1="742" y1="494" x2="742" y2="512" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-            <line class="arch-svg-arrow" x1="1026" y1="494" x2="1026" y2="512" stroke="url(#archArrowGrad)" stroke-width="2.4" marker-end="url(#archArrowHead)" />
-          </g>
-
-          <!-- ===== L5: DATA CORE ===== -->
-          <g class="arch-svg-layer arch-svg-layer--core">
-            <rect class="arch-svg-panel arch-svg-panel--core" x="20" y="512" width="1160" height="80" rx="16" fill="url(#archGradCore)" stroke="rgba(216,180,254,0.7)" stroke-width="1.8" filter="url(#archGlow)" />
-            <text class="arch-svg-tag arch-svg-tag--core" x="40" y="534">Data Core · Yagona baza</text>
-
-            <g transform="translate(180,562)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(167,139,250,0.22)" stroke="rgba(216,180,254,0.55)" stroke-width="1.2" />
-              <g transform="translate(-72,0)" stroke="#f3e8ff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <ellipse cx="0" cy="-6" rx="10" ry="3" />
-                <path d="M-10 -6 V6 C-10 7.5 -5 9 0 9 C5 9 10 7.5 10 6 V-6" />
-                <path d="M-10 -1 C-10 0.5 -5 2 0 2 C5 2 10 0.5 10 -1" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#f3e8ff" font-size="13.5" font-weight="700">PostgreSQL</text>
-            </g>
-            <g transform="translate(460,562)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(167,139,250,0.22)" stroke="rgba(216,180,254,0.55)" stroke-width="1.2" />
-              <g transform="translate(-72,0)" stroke="#f3e8ff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <ellipse cx="0" cy="-5" rx="8" ry="2.5" />
-                <path d="M-8 -5 V5 C-8 6 -4 7 0 7 C4 7 8 6 8 5 V-5" />
-                <path d="M-8 -1 C-8 0 -4 1 0 1 C4 1 8 0 8 -1" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#f3e8ff" font-size="13.5" font-weight="700">Redis Cache</text>
-            </g>
-            <g transform="translate(740,562)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(167,139,250,0.22)" stroke="rgba(216,180,254,0.55)" stroke-width="1.2" />
-              <g transform="translate(-72,0)" stroke="#f3e8ff" stroke-width="1.8" fill="none" stroke-linejoin="round" stroke-linecap="round">
-                <path d="M-9 4 C-11 4 -11 -1 -7 -2 C-7 -7 -2 -8 1 -5 C5 -8 10 -4 9 1 C12 1 12 4 9 4 Z" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#f3e8ff" font-size="13.5" font-weight="700">MinIO · Storage</text>
-            </g>
-            <g transform="translate(1020,562)">
-              <rect x="-100" y="-18" width="200" height="36" rx="10" fill="rgba(167,139,250,0.22)" stroke="rgba(216,180,254,0.55)" stroke-width="1.2" />
-              <g transform="translate(-72,0)" stroke="#f3e8ff" stroke-width="1.8" fill="none" stroke-linecap="round">
-                <circle cx="-2" cy="-2" r="6" />
-                <path d="M3 3 L8 8" />
-              </g>
-              <text x="14" y="5" text-anchor="middle" fill="#f3e8ff" font-size="13.5" font-weight="700">ElasticSearch</text>
-            </g>
-          </g>
-
-          <!-- L5 -> L6 arrow -->
-          <g class="arch-svg-flow">
-            <line class="arch-svg-arrow" x1="600" y1="592" x2="600" y2="610" stroke="url(#archArrowGrad)" stroke-width="3" marker-end="url(#archArrowHead)" />
-          </g>
-
-          <!-- ===== L6: TASHQI INTEGRATSIYALAR ===== -->
-          <g class="arch-svg-layer arch-svg-layer--ext">
-            <rect class="arch-svg-panel" x="20" y="610" width="1160" height="80" rx="16" fill="url(#archGradExt)" stroke="rgba(251,146,60,0.45)" stroke-width="1.4" />
-            <text class="arch-svg-tag" x="40" y="632">Tashqi integratsiyalar · 3rd-party API</text>
-
-            <g transform="translate(140,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(251,146,60,0.18)" stroke="rgba(253,186,116,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#fed7aa" font-size="13" font-weight="700">Didox</text>
-            </g>
-            <g transform="translate(280,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(34,197,94,0.18)" stroke="rgba(110,231,183,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#d1fae5" font-size="13" font-weight="700">Payme</text>
-            </g>
-            <g transform="translate(420,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(59,130,246,0.18)" stroke="rgba(147,197,253,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#dbeafe" font-size="13" font-weight="700">Click</text>
-            </g>
-            <g transform="translate(560,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(167,139,250,0.18)" stroke="rgba(216,180,254,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#ede9fe" font-size="13" font-weight="700">HEMIS</text>
-            </g>
-            <g transform="translate(700,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(6,182,212,0.18)" stroke="rgba(103,232,249,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#cffafe" font-size="13" font-weight="700">Telegram</text>
-            </g>
-            <g transform="translate(840,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(244,114,182,0.18)" stroke="rgba(249,168,212,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#fce7f3" font-size="13" font-weight="700">SMS Gateway</text>
-            </g>
-            <g transform="translate(980,664)">
-              <rect x="-58" y="-15" width="116" height="30" rx="8" fill="rgba(245,158,11,0.18)" stroke="rgba(252,211,77,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#fef3c7" font-size="13" font-weight="700">Email · SMTP</text>
-            </g>
-            <g transform="translate(1110,664)">
-              <rect x="-50" y="-15" width="100" height="30" rx="8" fill="rgba(99,102,241,0.18)" stroke="rgba(165,180,252,0.5)" stroke-width="1.2" />
-              <text x="0" y="5" text-anchor="middle" fill="#e0e7ff" font-size="13" font-weight="700">OAuth</text>
-            </g>
-          </g>
-        </svg>
-        <div class="arch-shimmer-sweep" aria-hidden="true"></div>
-      </div>
-    </div>
-
-    <div class="arch-stack">
-      <span>Microservices</span><span>REST API</span><span>gRPC</span><span>PostgreSQL</span><span>Redis</span><span>MinIO</span><span>WebSocket</span><span>Docker</span><span>Kubernetes</span><span>CI/CD</span>
-    </div>
-    <div class="arch-badges">
-      <span class="arch-badge arch-badge-secure">Secure</span>
-      <span class="arch-badge arch-badge-scale">Scalable</span>
-      <span class="arch-badge arch-badge-realtime">Real-time</span>
-    </div>
-  </div><!-- ===== SLIDE 16 — XAVFSIZLIK ===== -->
-  <div class="slide slide-security">
-    <div class="sec-bg" aria-hidden="true">
-      <div class="sec-grid-pattern"></div>
-      <div class="sec-orb sec-orb-1"></div>
-      <div class="sec-orb sec-orb-2"></div>
-      <div class="sec-orb sec-orb-3"></div>
-      <div class="sec-shield-pulse" aria-hidden="true"></div>
-    </div>
-
-    <div class="slide-label sec-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-      </svg>
-      Xavfsizlik
-    </div>
-    <h2 class="slide-title">Ma'lumotlar himoyasi</h2>
-
-    <p class="sec-intro">SuperApp va markaziy baza — <strong>uch qavatli himoya</strong> bilan qoplangan</p>
-
-    <div class="sec-grid">
-      <article class="sec-card sec-card-1">
-        <span class="sec-card-badge">Kirish</span>
-        <div class="sec-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-          </svg></div>
-        <h3 class="sec-card-title">RBAC</h3>
-        <p class="sec-card-desc">Role-Based Access Control — har bir foydalanuvchiga tegishli ruxsat va rol.</p>
-        <ul class="sec-pills">
-          <li>Admin</li>
-          <li>O'qituvchi</li>
-          <li>Talaba</li>
-        </ul>
-        <div class="sec-stat"><strong>12+</strong>rol turi</div>
-      </article>
-      <article class="sec-card sec-card-2">
-        <span class="sec-card-badge">Nazorat</span>
-        <div class="sec-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-            <polyline points="14 2 14 8 20 8" />
-            <line x1="16" x2="8" y1="13" y2="13" />
-            <line x1="16" x2="8" y1="17" y2="17" />
-          </svg></div>
-        <h3 class="sec-card-title">Audit Log</h3>
-        <p class="sec-card-desc">Barcha amallar loglanadi — kim, qachon, nima qildi? To'liq izlanuvchanlik.</p>
-        <ul class="sec-pills">
-          <li>Kim</li>
-          <li>Qachon</li>
-          <li>Nima</li>
-        </ul>
-        <div class="sec-stat"><strong>100%</strong>log qamrovi</div>
-      </article>
-      <article class="sec-card sec-card-3">
-        <span class="sec-card-badge">Himoya</span>
-        <div class="sec-card-watermark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          </svg></div>
-        <h3 class="sec-card-title">Kiberxavfsizlik</h3>
-        <p class="sec-card-desc">SSL, shifrlash, DDoS himoya va 2FA autentifikatsiya — zamonaviy standartlar.</p>
-        <ul class="sec-pills">
-          <li>SSL</li>
-          <li>DDoS</li>
-          <li>2FA</li>
-        </ul>
-        <div class="sec-stat"><strong>24/7</strong>monitoring</div>
-      </article>
-    </div>
-
-    <div class="sec-footer">
-      <div class="sec-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-        </svg>
-        GDPR-ready
-      </div>
-      <div class="sec-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-        </svg>
-        AES-256 shifrlash
-      </div>
-      <div class="sec-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path
-            d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
-        </svg>
-        API Gateway JWT
-      </div>
-      <div class="sec-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2v4" />
-          <path d="M12 18v4" />
-          <path d="m4.93 4.93 2.83 2.83" />
-          <path d="m16.24 16.24 2.83 2.83" />
-          <path d="M2 12h4" />
-          <path d="M18 12h4" />
-          <path d="m4.93 19.07 2.83-2.83" />
-          <path d="m16.24 7.76 2.83-2.83" />
-        </svg>
-        Zaxira nusxa
-      </div>
-    </div>
-  </div><!-- ===== SLIDE 21 — JAMOA ===== -->
-  <div class="slide slide-team">
-    <div class="team-bg" aria-hidden="true">
-      <div class="team-orb team-orb-1"></div>
-      <div class="team-orb team-orb-2"></div>
-    </div>
-    <div class="slide-label team-label">
-      <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-      Jamoa
-    </div>
-    <h2 class="slide-title">Loyiha jamoasi</h2>
-    <p class="team-intro"><strong>11 mutaxassis</strong> — umumiy jamoa, bitta loyiha ostida</p>
-
-    <div class="team-section-head">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-      Umumiy jamoa
-    </div>
-
-    <div class="team-cards">
-      <article class="team-card team-card-1">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 11v2a4 4 0 0 1-4 4h-1" /></svg></div>
-        <h3 class="team-card-title">Project Manager + Team Lead</h3>
-      </article>
-      <article class="team-card team-card-2">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="8" x="2" y="2" rx="2" /><rect width="20" height="8" x="2" y="14" rx="2" /><path d="M6 6h.01M6 18h.01" /></svg></div>
-        <h3 class="team-card-title">Backend Developer</h3>
-      </article>
-      <article class="team-card team-card-3">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2" /><path d="M8 21h8M12 17v4" /></svg></div>
-        <h3 class="team-card-title">Frontend Developer</h3>
-      </article>
-      <article class="team-card team-card-4">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" /><path d="M12 18h.01" /></svg></div>
-        <h3 class="team-card-title">Mobile Developer</h3>
-      </article>
-      <article class="team-card team-card-5">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8" /><rect width="16" height="12" x="4" y="8" rx="2" /><path d="M2 14h2M20 14h2" /></svg></div>
-        <h3 class="team-card-title">AI Engineer</h3>
-      </article>
-      <article class="team-card team-card-6">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg></div>
-        <h3 class="team-card-title">DevOps / System Engineer</h3>
-      </article>
-      <article class="team-card team-card-7">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" /></svg></div>
-        <h3 class="team-card-title">Full Stack Developer</h3>
-      </article>
-      <article class="team-card team-card-8">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" /><circle cx="12" cy="12" r="2" /></svg></div>
-        <h3 class="team-card-title">IoT / Smart Campus Specialist</h3>
-      </article>
-      <article class="team-card team-card-9">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><path d="m9 11 3 3L22 4" /></svg></div>
-        <h3 class="team-card-title">QA Engineer</h3>
-      </article>
-      <article class="team-card team-card-10">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5" /><path d="M17 3a2.83 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" /></svg></div>
-        <h3 class="team-card-title">UI/UX Designer</h3>
-      </article>
-      <article class="team-card team-card-11">
-        <div class="team-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18" /><path d="M18 17V9M13 17V5M8 17v-3" /></svg></div>
-        <h3 class="team-card-title">Business Analyst</h3>
-      </article>
-    </div>
-    <div class="team-stat">
-      <div class="team-stat-item"><strong>11+</strong><span>Mutaxassis</span></div>
-      <div class="team-stat-item"><strong>12</strong><span>Oy roadmap</span></div>
-      <div class="team-stat-item"><strong>50+</strong><span>Modul</span></div>
-    </div>
-  </div><!-- ===== SLIDE 19 — ROADMAP ===== -->
   <div class="slide slide-roadmap">
     <div class="roadmap-bg" aria-hidden="true">
       <div class="roadmap-orb roadmap-orb-1"></div>
@@ -1968,6 +1017,28 @@
   </div>
 
   <div id="modals-root" aria-hidden="true"></div>
+
+  <div class="strategy-detail-modal" id="strategyDetailModal" hidden>
+    <div class="strategy-detail-backdrop" data-close-strategy-modal></div>
+    <div class="strategy-detail-dialog" role="dialog" aria-modal="true" aria-labelledby="strategyDetailTitle">
+      <button type="button" class="strategy-detail-close" data-close-strategy-modal aria-label="Yopish">&times;</button>
+      <span class="strategy-detail-kicker" id="strategyDetailKicker"></span>
+      <h3 class="strategy-detail-title" id="strategyDetailTitle"></h3>
+      <p class="strategy-detail-intro" id="strategyDetailIntro"></p>
+      <div class="strategy-detail-grid" id="strategyDetailGrid"></div>
+    </div>
+  </div>
+
+  <div class="role-model-modal" id="roleModelModal" hidden>
+    <div class="role-model-modal-backdrop" data-close-role-model-modal></div>
+    <div class="role-model-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="roleModelTitle">
+      <button class="role-model-modal-close" type="button" data-close-role-model-modal aria-label="Yopish">✕</button>
+      <p class="role-model-modal-kicker" id="roleModelKicker"></p>
+      <h3 class="role-model-modal-title" id="roleModelTitle"></h3>
+      <p class="role-model-modal-intro" id="roleModelIntro"></p>
+      <div class="role-model-modal-grid" id="roleModelGrid"></div>
+    </div>
+  </div>
   <script src="js/integration-modal.js"></script>
   <script src="js/roles-modal.js"></script>
   <script src="main.js"></script>

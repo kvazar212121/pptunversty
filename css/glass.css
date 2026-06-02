@@ -1,13 +1,10 @@
 /* ===== GLASSMORPHISM — barcha shaffof panellar (xiralashgan) ===== */
 
 .feature-chip,
-.tier-card,
 .stat-card,
-.problem-card,
 .flow-item,
 .strategy-banner,
 .mgmt-node-card,
-.campus-card,
 .learning-card,
 .dir-card,
 .eco-node,
@@ -86,21 +83,167 @@
   box-shadow: var(--glass-shadow), var(--glass-inset);
 }
 
-/* Roadmap kartalar — rangli gradient, faqat blur */
+/* Roadmap kartalar — qoramtir gradient, blur yo‘q */
 .slide-roadmap .roadmap-card {
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  box-shadow: var(--glass-shadow), var(--glass-inset);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.38) !important;
+}
+/* Digit slide — yumshoq kulrang-qora gradient, blur yo‘q */
+.slide-digit.slide-digit-modules .mgmt-mod-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.38) !important;
+  background: linear-gradient(145deg, #2a3344 0%, #232b3a 48%, #1c2432 100%) !important;
 }
 
-/* Xavfsizlik kartalar — rangli gradient, faqat blur */
-.slide-security .sec-card {
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  box-shadow: var(--glass-shadow), var(--glass-inset);
+.slide-digit.slide-digit-modules .mgmt-mod-card.accent-teal {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.14) 0%, #2a3542 42%, #232c3a 72%, #1c2634 100%) !important;
 }
 
-/* Telefon ichidagi elementlar — alohida */
+.slide-digit.slide-digit-modules .mgmt-mod-card.accent-amber {
+  background: linear-gradient(145deg, rgba(234, 179, 8, 0.12) 0%, #2e3038 42%, #262a34 72%, #1f2430 100%) !important;
+}
+
+.slide-digit.slide-digit-modules .mgmt-mod-card.accent-red {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.13) 0%, #2e2a36 42%, #262430 72%, #1f2430 100%) !important;
+}
+
+/* Smart Learning modullari — qoramtir gradient, blur yo‘q */
+.slide-learning.slide-learning-modules .learning-mod-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.38) !important;
+}
+
+.slide-learning.slide-learning-modules .learning-mod-card.c-teal {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.14) 0%, #2a3542 42%, #232c3a 72%, #1c2634 100%) !important;
+}
+
+.slide-learning.slide-learning-modules .learning-mod-card.c-amber {
+  background: linear-gradient(145deg, rgba(234, 179, 8, 0.12) 0%, #2e3038 42%, #262a34 72%, #1f2430 100%) !important;
+}
+
+.slide-learning.slide-learning-modules .learning-mod-card.c-red {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.13) 0%, #2e2a36 42%, #262430 72%, #1f2430 100%) !important;
+}
+
+.slide-learning.slide-learning-modules .learning-mod-tags span {
+  background: rgba(37, 47, 63, 0.75) !important;
+  border-color: rgba(148, 163, 184, 0.22) !important;
+}
+
+/* Smart Management modullari — learning-mod kartalar, blur yo‘q */
+.slide-management-modules .learning-mod-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.38) !important;
+}
+
+.slide-management-modules .learning-mod-card.c-blue {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.14) 0%, #2a3548 42%, #232c3a 72%, #1c2634 100%) !important;
+}
+
+.slide-management-modules .learning-mod-card.c-teal {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.14) 0%, #2a3542 42%, #232c3a 72%, #1c2634 100%) !important;
+}
+
+.slide-management-modules .learning-mod-card.c-amber {
+  background: linear-gradient(145deg, rgba(234, 179, 8, 0.12) 0%, #2e3038 42%, #262a34 72%, #1f2430 100%) !important;
+}
+
+.slide-management-modules .learning-mod-card.c-red {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.13) 0%, #2e2a36 42%, #262430 72%, #1f2430 100%) !important;
+}
+
+.slide-management-modules .learning-mod-card.c-orange {
+  background: linear-gradient(145deg, rgba(249, 115, 22, 0.14) 0%, #2e2a32 42%, #262430 72%, #1f2430 100%) !important;
+}
+
+.slide-management-modules .learning-mod-tags span {
+  background: rgba(37, 47, 63, 0.75) !important;
+  border-color: rgba(148, 163, 184, 0.22) !important;
+}
+
+/* Smart Campus modullari — qorong‘u gradient, blur yo‘q */
+.slide-campus.slide-campus-modules .campus-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.slide-campus.slide-campus-modules .campus-card.accent-teal {
+  background: linear-gradient(165deg, rgba(20, 184, 166, 0.22) 0%, rgba(20, 48, 92, 0.9) 46%, rgba(8, 16, 38, 0.98) 100%) !important;
+  border-color: rgba(45, 212, 191, 0.42) !important;
+}
+
+.slide-campus.slide-campus-modules .campus-card.accent-blue {
+  background: linear-gradient(165deg, rgba(59, 130, 246, 0.24) 0%, rgba(18, 40, 78, 0.92) 46%, rgba(8, 16, 38, 0.98) 100%) !important;
+  border-color: rgba(96, 165, 250, 0.48) !important;
+}
+
+.slide-campus.slide-campus-modules .campus-card.accent-amber {
+  background: linear-gradient(165deg, rgba(234, 179, 8, 0.2) 0%, rgba(22, 42, 76, 0.9) 46%, rgba(8, 16, 38, 0.98) 100%) !important;
+  border-color: rgba(250, 204, 21, 0.55) !important;
+}
+
+/* Muammolar slaydi — 2-sahifa bilan bir xil qoramtir gradient */
+.slide-problems.slide-problems-modules .mgmt-mod-card ,.slide-strategy.slide-strategy-modules .mgmt-mod-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(148, 163, 184, 0.18) !important;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.38) !important;
+}
+
+.slide-problems.slide-problems-modules .mgmt-mod-card.accent-teal ,.slide-strategy.slide-strategy-modules .mgmt-mod-card.accent-teal {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.14) 0%, #2a3542 42%, #232c3a 72%, #1c2634 100%) !important;
+}
+
+.slide-problems.slide-problems-modules .mgmt-mod-card.accent-amber ,.slide-strategy.slide-strategy-modules .mgmt-mod-card.accent-amber {
+  background: linear-gradient(145deg, rgba(234, 179, 8, 0.12) 0%, #2e3038 42%, #262a34 72%, #1f2430 100%) !important;
+}
+
+.slide-problems.slide-problems-modules .mgmt-mod-card.accent-red ,.slide-strategy.slide-strategy-modules .mgmt-mod-card.accent-red {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.13) 0%, #2e2a36 42%, #262430 72%, #1f2430 100%) !important;
+}
+
+.slide-problems.slide-problems-modules .mgmt-mod-card.accent-campus ,.slide-strategy.slide-strategy-modules .mgmt-mod-card.accent-campus {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.14) 0%, #2a3542 42%, #232c3a 72%, #1c2634 100%) !important;
+}
+
+/* Integratsiya arxitekturasi — qoramtir gradient, blur yo‘q */
+.slide-management .integr-arch-diagram,
+.slide-management .integr-arch-line,
+.slide-management .integr-arch-line span,
+.slide-management .integr-arch-module,
+.slide-management .integr-arch-core,
+.slide-management .integr-arch-note {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Strategiya slaydi — qoramtir gradient (boshqa burchak), blur yo‘q */
+.slide-strategy .strategy-sol-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42) !important;
+}
+
+.slide-strategy .strategy-sol-card--learning {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.2) 0%, #1e293b 38%, #111827 72%, #0c1018 100%) !important;
+}
+
+.slide-strategy .strategy-sol-card--management {
+  background: linear-gradient(145deg, rgba(245, 158, 11, 0.18) 0%, #1e293b 38%, #111827 72%, #0c1018 100%) !important;
+}
+
+.slide-strategy .strategy-sol-card--campus {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.2) 0%, #1e293b 38%, #111827 72%, #0c1018 100%) !important;
+}
+
 .pay-screen,
 .pay-phone-inner,
 .demo-phone .screen,

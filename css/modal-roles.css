@@ -32,13 +32,15 @@
   max-height: 94vh;
   overflow-y: auto;
   padding: 28px 32px 24px;
-  border-radius: 28px;
-  background: linear-gradient(155deg, rgba(12, 18, 36, 0.98) 0%, rgba(18, 10, 32, 0.97) 100%);
-  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 0;
+  background: linear-gradient(155deg, #0e1526 0%, #12101c 100%);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   box-shadow: 0 32px 100px rgba(0, 0, 0, 0.65);
   text-align: left;
   animation: rolesModalIn 0.35s ease;
   box-sizing: border-box;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 @keyframes rolesModalIn {
@@ -58,9 +60,9 @@
   right: 14px;
   width: 44px;
   height: 44px;
-  border: none;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  background: #1a2236;
   color: #fff;
   font-size: 26px;
   line-height: 1;
@@ -77,6 +79,9 @@
 
 .roles-modal-info {
   min-width: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .roles-modal-label {
@@ -93,8 +98,9 @@
   margin: 0 40px 10px 0;
   font-size: clamp(24px, 2.8vw, 34px);
   font-weight: 800;
-  color: #fff;
+  color: #f8fafc;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .roles-modal-desc {
@@ -102,7 +108,7 @@
   font-size: clamp(14px, 1.35vw, 17px);
   font-weight: 500;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.82);
+  color: #e2e8f0;
   max-width: 520px;
 }
 
@@ -112,18 +118,21 @@
   gap: 12px;
 }
 
-.roles-modal-group {
+.roles-modal-info .roles-modal-group {
   padding: 16px 18px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0 !important;
+  background: #151c2e;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 .roles-modal-group h4 {
   margin: 0 0 10px;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -138,8 +147,8 @@
   padding: 5px 0 5px 18px;
   font-size: clamp(13px, 1.25vw, 15px);
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.92);
-  line-height: 1.45;
+  color: #f1f5f9;
+  line-height: 1.5;
 }
 
 .roles-modal-group li::before {
@@ -267,8 +276,9 @@
   color: #a5b4fc;
 }
 
-.roles-modal--student .roles-modal-group {
-  border-color: rgba(129, 140, 248, 0.25);
+.roles-modal--student .roles-modal-info .roles-modal-group {
+  background: #16182c;
+  border-color: rgba(129, 140, 248, 0.42);
 }
 
 .roles-modal--student .roles-modal-group h4 {
@@ -287,8 +297,9 @@
   color: #6ee7b7;
 }
 
-.roles-modal--teacher .roles-modal-group {
-  border-color: rgba(52, 211, 153, 0.25);
+.roles-modal--teacher .roles-modal-info .roles-modal-group {
+  background: #101f1c;
+  border-color: rgba(52, 211, 153, 0.42);
 }
 
 .roles-modal--teacher .roles-modal-group h4 {
@@ -307,8 +318,9 @@
   color: #fdba74;
 }
 
-.roles-modal--leader .roles-modal-group {
-  border-color: rgba(251, 146, 60, 0.25);
+.roles-modal--leader .roles-modal-info .roles-modal-group {
+  background: #1f1a14;
+  border-color: rgba(251, 146, 60, 0.42);
 }
 
 .roles-modal--leader .roles-modal-group h4 {
@@ -327,8 +339,9 @@
   color: #f9a8d4;
 }
 
-.roles-modal--customer .roles-modal-group {
-  border-color: rgba(244, 114, 182, 0.25);
+.roles-modal--customer .roles-modal-info .roles-modal-group {
+  background: #1f1420;
+  border-color: rgba(244, 114, 182, 0.42);
 }
 
 .roles-modal--customer .roles-modal-group h4 {

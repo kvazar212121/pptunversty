@@ -1,0 +1,146 @@
+/* ===== UMUMIY DECK FONI — teal-kulrang gradient (rasmdagi palitra) ===== */
+
+.deck-global-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: #0f171e;
+}
+
+.deck-global-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 85% 65% at 12% 18%, rgba(32, 58, 67, 0.55), transparent 58%),
+    radial-gradient(ellipse 75% 55% at 88% 82%, rgba(15, 23, 30, 0.7), transparent 52%),
+    linear-gradient(
+      155deg,
+      #203a43 0%,
+      #1a2b34 24%,
+      #152a33 48%,
+      #0f171e 72%,
+      #060c11 100%
+    );
+}
+
+.deck-global-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.deck-global-bg-glow--1 {
+  width: min(55vw, 620px);
+  height: min(55vw, 620px);
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.14), transparent 68%);
+}
+
+.deck-global-bg-glow--2 {
+  width: min(50vw, 560px);
+  height: min(50vw, 560px);
+  bottom: -12%;
+  right: -4%;
+  background: radial-gradient(circle, rgba(26, 43, 52, 0.45), transparent 70%);
+}
+
+.deck-global-bg-glow--3 {
+  width: min(42vw, 480px);
+  height: min(42vw, 480px);
+  top: 45%;
+  left: 40%;
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.08), transparent 72%);
+}
+
+/* Slayd ichidagi orblar — teal aksent */
+.strategy-orb-1,
+.didox-orb-1,
+.roles-orb-1,
+.roadmap-orb-1,
+.mgmt-orb-1,
+.finale-orb-1 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.18), transparent 70%) !important;
+}
+
+.strategy-orb-2,
+.didox-orb-2,
+.roles-orb-2,
+.roadmap-orb-2,
+.mgmt-orb-2,
+.finale-orb-2 {
+  background: radial-gradient(circle, rgba(32, 58, 67, 0.35), transparent 70%) !important;
+}
+
+.mgmt-mod-orb-1 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.2), transparent 70%) !important;
+}
+
+.mgmt-mod-orb-2 {
+  background: radial-gradient(circle, rgba(26, 188, 156, 0.12), transparent 70%) !important;
+}
+
+.learning-orb-1,
+.dir-orb-1,
+.pay-orb-1 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.16), transparent 70%) !important;
+}
+
+.learning-orb-2,
+.dir-orb-2,
+.pay-orb-2 {
+  background: radial-gradient(circle, rgba(32, 58, 67, 0.3), transparent 70%) !important;
+}
+
+.learning-orb-3,
+.dir-orb-3,
+.roles-orb-3 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.1), transparent 70%) !important;
+}
+
+.demo-orb-1,
+.campus-orb-1,
+.ai-orb-1 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.14), transparent 70%) !important;
+}
+
+.demo-orb-2,
+.campus-orb-2,
+.ai-orb-2 {
+  background: radial-gradient(circle, rgba(26, 43, 52, 0.32), transparent 70%) !important;
+}
+
+.role-models-orb-1,
+.results-orb-1 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.16), transparent 70%) !important;
+}
+
+.role-models-orb-2,
+.results-orb-2 {
+  background: radial-gradient(circle, rgba(32, 58, 67, 0.28), transparent 70%) !important;
+}
+
+.eco-orb-1 {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.14), transparent 70%) !important;
+}
+
+.eco-orb-2,
+.life-orb-1 {
+  background: radial-gradient(circle, rgba(26, 188, 156, 0.1), transparent 70%) !important;
+}
+
+.life-orb-2 {
+  background: radial-gradient(circle, rgba(32, 58, 67, 0.25), transparent 70%) !important;
+}
+
+.hero-glow {
+  background: radial-gradient(circle, rgba(0, 201, 167, 0.2), transparent 70%) !important;
+}
+
+.hero-glow-2 {
+  background: radial-gradient(circle, rgba(32, 58, 67, 0.35), transparent 70%) !important;
+}

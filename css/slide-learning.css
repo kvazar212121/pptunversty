@@ -494,3 +494,234 @@ body.learning-modal-open {
     margin-bottom: 8px;
   }
 }
+
+/* ===== SLIDE 7 — SMART LEARNING MODULLARI (NEW) ===== */
+.slide-learning.slide-learning-modules .slide-title {
+  text-align: left !important;
+  max-width: 720px;
+  margin-bottom: 18px !important;
+}
+
+.slide-learning.slide-learning-modules .slide-label {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+
+.learning-mod-grid {
+  width: 100%;
+  max-width: 1360px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.learning-mod-card {
+  position: relative;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: linear-gradient(145deg, #2a3344 0%, #232b3a 48%, #1c2432 100%);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.38);
+  padding: 14px 14px 12px;
+  min-height: 248px;
+  overflow: hidden;
+}
+
+.learning-mod-card.c-teal {
+  background: linear-gradient(145deg, rgba(20, 184, 166, 0.14) 0%, #2a3542 42%, #232c3a 72%, #1c2634 100%);
+}
+
+.learning-mod-card.c-amber {
+  background: linear-gradient(145deg, rgba(234, 179, 8, 0.12) 0%, #2e3038 42%, #262a34 72%, #1f2430 100%);
+}
+
+.learning-mod-card.c-red {
+  background: linear-gradient(145deg, rgba(239, 68, 68, 0.13) 0%, #2e2a36 42%, #262430 72%, #1f2430 100%);
+}
+
+.learning-mod-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.learning-mod-card.c-teal::before { background: rgba(20, 184, 166, 0.9); }
+.learning-mod-card.c-amber::before { background: rgba(234, 179, 8, 0.9); }
+.learning-mod-card.c-red::before { background: rgba(239, 68, 68, 0.9); }
+
+.learning-mod-index {
+  font-size: clamp(44px, 3.8vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.learning-mod-card.c-teal .learning-mod-index { color: #14b8a6; }
+.learning-mod-card.c-amber .learning-mod-index { color: #d97706; }
+.learning-mod-card.c-red .learning-mod-index { color: #ef4444; }
+
+.learning-mod-card h3 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 1.9vw, 32px);
+  line-height: 1.18;
+  color: #fff;
+}
+
+.learning-mod-card p {
+  margin: 0 0 12px;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.learning-mod-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.learning-mod-tags span {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 9px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(37, 47, 63, 0.75);
+  color: rgba(226, 232, 240, 0.92);
+}
+
+.slide-learning.slide-learning-modules.active .learning-mod-card {
+  animation: learningModIn 0.5s ease both;
+}
+
+.slide-learning.slide-learning-modules.active .learning-mod-card:nth-child(1) { animation-delay: 0.06s; }
+.slide-learning.slide-learning-modules.active .learning-mod-card:nth-child(2) { animation-delay: 0.12s; }
+.slide-learning.slide-learning-modules.active .learning-mod-card:nth-child(3) { animation-delay: 0.18s; }
+.slide-learning.slide-learning-modules.active .learning-mod-card:nth-child(4) { animation-delay: 0.24s; }
+.slide-learning.slide-learning-modules.active .learning-mod-card:nth-child(5) { animation-delay: 0.3s; }
+.slide-learning.slide-learning-modules.active .learning-mod-card:nth-child(6) { animation-delay: 0.36s; }
+
+@keyframes learningModIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.learning-mod-card.c-blue::before { background: rgba(59, 130, 246, 0.9); }
+.learning-mod-card.c-orange::before { background: rgba(249, 115, 22, 0.9); }
+
+.learning-mod-card.c-blue {
+  background: linear-gradient(145deg, rgba(59, 130, 246, 0.14) 0%, #2a3548 42%, #232c3a 72%, #1c2634 100%);
+}
+
+.learning-mod-card.c-orange {
+  background: linear-gradient(145deg, rgba(249, 115, 22, 0.14) 0%, #2e2a32 42%, #262430 72%, #1f2430 100%);
+}
+
+.learning-mod-card.c-blue .learning-mod-index { color: #3b82f6; }
+.learning-mod-card.c-orange .learning-mod-index { color: #f97316; }
+
+.learning-mod-watermark {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  width: clamp(52px, 5vw, 72px);
+  height: clamp(52px, 5vw, 72px);
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.learning-mod-watermark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.learning-mod-watermark--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(40px, 4vw, 56px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+@media (max-width: 1100px) {
+  .learning-mod-grid {
+    grid-template-columns: 1fr;
+    max-width: 820px;
+  }
+
+  .learning-mod-card {
+    min-height: auto;
+  }
+}
+
+/* ===== SLIDE 8 — SMART MANAGEMENT MODULLARI ===== */
+.slide-management-modules {
+  overflow-x: hidden;
+  overflow-y: auto;
+  justify-content: flex-start !important;
+  padding: clamp(36px, 5vh, 56px) clamp(16px, 2.5vw, 40px) clamp(88px, 11vh, 100px) !important;
+}
+
+.mgmt-mod-inner {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1360px);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.slide-management-modules .slide-label {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  color: #f87171 !important;
+}
+
+.slide-management-modules .slide-title {
+  text-align: left !important;
+  max-width: 100% !important;
+  margin-bottom: clamp(14px, 2vh, 20px) !important;
+  background: none !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #f8fafc !important;
+  color: #f8fafc !important;
+}
+
+.slide-management-modules .learning-mod-grid {
+  z-index: 2;
+}
+
+.slide-management-modules.active .learning-mod-card {
+  animation: learningModIn 0.5s ease both;
+}
+
+.slide-management-modules.active .learning-mod-card:nth-child(1) { animation-delay: 0.06s; }
+.slide-management-modules.active .learning-mod-card:nth-child(2) { animation-delay: 0.12s; }
+.slide-management-modules.active .learning-mod-card:nth-child(3) { animation-delay: 0.18s; }
+.slide-management-modules.active .learning-mod-card:nth-child(4) { animation-delay: 0.24s; }
+.slide-management-modules.active .learning-mod-card:nth-child(5) { animation-delay: 0.3s; }
+.slide-management-modules.active .learning-mod-card:nth-child(6) { animation-delay: 0.36s; }
+
+@media (max-width: 1100px) {
+  .slide-management-modules .learning-mod-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .slide-management-modules .slide-title,
+  .slide-management-modules .slide-label {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .slide-management-modules .learning-mod-grid {
+    grid-template-columns: 1fr;
+  }
+}
