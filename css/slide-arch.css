@@ -117,7 +117,7 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: min(58vh, 500px);
+  max-height: min(72vh, 620px);
   overflow: visible;
 }
 
@@ -198,20 +198,28 @@
   opacity: 0;
 }
 
+.slide-arch.active .arch-svg-layer--users {
+  animation: archLayerIn 0.45s ease 0.1s forwards;
+}
+
 .slide-arch.active .arch-svg-layer--client {
-  animation: archLayerIn 0.45s ease 0.12s forwards;
+  animation: archLayerIn 0.45s ease 0.18s forwards;
 }
 
 .slide-arch.active .arch-svg-layer--api {
-  animation: archLayerIn 0.45s ease 0.2s forwards;
-}
-
-.slide-arch.active .arch-svg-layer--core {
-  animation: archLayerIn 0.45s ease 0.28s forwards;
+  animation: archLayerIn 0.45s ease 0.26s forwards;
 }
 
 .slide-arch.active .arch-svg-layer--svc {
-  animation: archLayerIn 0.45s ease 0.36s forwards;
+  animation: archLayerIn 0.45s ease 0.34s forwards;
+}
+
+.slide-arch.active .arch-svg-layer--core {
+  animation: archLayerIn 0.45s ease 0.42s forwards;
+}
+
+.slide-arch.active .arch-svg-layer--ext {
+  animation: archLayerIn 0.45s ease 0.5s forwards;
 }
 
 @keyframes archLayerIn {

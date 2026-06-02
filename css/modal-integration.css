@@ -1,0 +1,319 @@
+/* ===== INTEGRATSIYA MODALI (eski 3-sahifa kontenti) ===== */
+#modals-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  pointer-events: none;
+}
+
+#modals-root > * {
+  pointer-events: auto;
+}
+
+.integration-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.integration-modal[hidden] {
+  display: none;
+}
+
+.integration-modal.is-open {
+  display: flex;
+}
+
+.integration-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.integration-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(98vw, 1680px);
+  max-height: 96vh;
+  min-height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 32px 36px 28px;
+  border-radius: 22px;
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.98) 0%, rgba(20, 12, 28, 0.96) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  animation: integrationModalIn 0.35s ease;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgba(251, 191, 36, 0.45) rgba(255, 255, 255, 0.06);
+  box-sizing: border-box;
+}
+
+.integration-modal-dialog::-webkit-scrollbar {
+  width: 8px;
+}
+
+.integration-modal-dialog::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.45);
+  border-radius: 8px;
+}
+
+@keyframes integrationModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.integration-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.integration-modal-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fbbf24;
+  margin-bottom: 8px;
+}
+
+.integration-modal-label svg {
+  width: 18px;
+  height: 18px;
+}
+
+.integration-modal-title {
+  margin: 0 48px 12px 0;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  color: #fecaca;
+  line-height: 1.2;
+}
+
+.integration-modal-intro {
+  margin: 0 0 20px;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 500;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: none;
+}
+
+.integration-modal-intro strong {
+  color: #fbbf24;
+}
+
+.integration-section {
+  margin-bottom: 14px;
+}
+
+.integration-section-title {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.integration-count {
+  color: #f87171;
+  font-weight: 800;
+}
+
+.integration-systems-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.integration-sys-card {
+  padding: 20px 22px;
+  min-height: 130px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 0;
+  text-align: left;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.integration-sys-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(248, 113, 113, 0.35);
+  box-shadow: 0 10px 28px rgba(239, 68, 68, 0.1);
+}
+
+.integration-sys-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.integration-sys-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+
+.integration-sys-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.integration-sys-badge {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 2px 6px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.integration-sys-card h4 {
+  margin: 0 0 8px;
+  font-size: clamp(17px, 1.6vw, 20px);
+  font-weight: 800;
+  color: #fff;
+}
+
+.integration-sys-card p {
+  margin: 0;
+  font-size: clamp(14px, 1.3vw, 16px);
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.integration-modal-footer {
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.integration-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 800;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.integration-warning svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.integration-smart-note {
+  margin: 0 0 10px;
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.integration-smart-note strong {
+  color: #93c5fd;
+}
+
+.integration-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.integration-chips span {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.integration-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .integration-systems-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .integration-modal-dialog {
+    width: 98vw;
+    max-height: 96vh;
+  }
+
+  .integration-systems-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .integration-sys-card {
+    min-height: 110px;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .integration-modal-dialog {
+    padding: 18px 14px 14px;
+  }
+
+  .integration-systems-grid {
+    grid-template-columns: 1fr;
+  }
+}

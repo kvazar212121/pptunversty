@@ -21,7 +21,6 @@
 .arch-node,
 .arch-stack,
 .arch-badge,
-.kredit-card,
 .life-card,
 .life-chip,
 .pay-card,
@@ -82,13 +81,6 @@
 
 /* AI kartalar — rangli gradient, faqat blur */
 .slide-ai .ai-card {
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
-  box-shadow: var(--glass-shadow), var(--glass-inset);
-}
-
-/* Kredit kartalar — rangli gradient, faqat blur */
-.slide-kredit .kredit-card {
   -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
   backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
   box-shadow: var(--glass-shadow), var(--glass-inset);
@@ -161,7 +153,6 @@
 .dir-icon,
 .eco-dot,
 .sec-card-icon,
-.kredit-card-icon,
 .life-card-icon,
 .didox-card-icon,
 .didox-step-icon,

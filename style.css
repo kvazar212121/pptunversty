@@ -893,6 +893,8 @@ h1.title .ai {
 .slide-problems .slide-title {
   margin-bottom: 10px;
   font-size: clamp(24px, 3.2vw, 42px);
+  max-width: 980px;
+  text-align: left;
 }
 
 .slide-problems .slide-label {
@@ -915,9 +917,9 @@ h1.title .ai {
 
 .problem-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1240px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1360px;
   width: 100%;
   text-align: left;
 }
@@ -926,19 +928,37 @@ h1.title .ai {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.045);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 26px 28px;
-  min-height: 118px;
+  border-radius: 22px;
+  padding: 32px 32px;
+  min-height: 360px;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.problem-card:focus-visible {
+  outline: 2px solid rgba(248, 113, 113, 0.85);
+  outline-offset: 2px;
 }
 
 .problem-card-body {
   flex: 1;
   min-width: 0;
+}
+
+.problem-index {
+  font-size: clamp(54px, 4.2vw, 72px);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 12px;
 }
 
 .problem-card::before {
@@ -984,24 +1004,76 @@ h1.title .ai {
 .p-icon-pink { background: rgba(236, 72, 153, 0.14); color: #f472b6; box-shadow: 0 0 24px rgba(236, 72, 153, 0.12); }
 
 .problem-card .p-title {
-  font-weight: 700;
-  font-size: clamp(16px, 1.5vw, 20px);
-  margin-bottom: 10px;
-  color: #fecaca;
-  line-height: 1.3;
+  font-weight: 800;
+  font-size: clamp(24px, 1.8vw, 34px);
+  margin-bottom: 14px;
+  color: #ffffff;
+  line-height: 1.28;
 }
 
 .problem-card .p-desc {
-  font-size: clamp(13px, 1.2vw, 15px);
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.6;
+  font-size: clamp(16px, 1.15vw, 19px);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.62;
+  margin: 0 0 18px;
 }
 
-.problem-card .p-desc .sys-label {
-  padding: 3px 8px;
-  font-size: 10px;
-  margin: 0 4px 4px 0;
-  vertical-align: middle;
+.problem-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.problem-tags span {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.problem-card--red {
+  border-top: 3px solid rgba(248, 113, 113, 0.9);
+}
+
+.problem-card--amber {
+  border-top: 3px solid rgba(251, 191, 36, 0.9);
+}
+
+.problem-card--cyan {
+  border-top: 3px solid rgba(45, 212, 191, 0.9);
+}
+
+.problem-card--red .problem-index {
+  color: #ef4444;
+}
+
+.problem-card--amber .problem-index {
+  color: #f59e0b;
+}
+
+.problem-card--cyan .problem-index {
+  color: #14b8a6;
+}
+
+.problems-result {
+  margin-top: 20px;
+  max-width: 1360px;
+  width: 100%;
+  padding: 16px 18px;
+  border-left: 4px solid #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(15px, 1.15vw, 18px);
+  line-height: 1.55;
+  text-align: left;
+}
+
+.problems-result strong {
+  color: #6ee7b7;
+  font-weight: 800;
 }
 
 .slide-problems.active .problem-card {
@@ -1011,11 +1083,6 @@ h1.title .ai {
 .slide-problems.active .problem-card:nth-child(1) { animation-delay: 0.06s, 0s; }
 .slide-problems.active .problem-card:nth-child(2) { animation-delay: 0.12s, 0.5s; }
 .slide-problems.active .problem-card:nth-child(3) { animation-delay: 0.18s, 1s; }
-.slide-problems.active .problem-card:nth-child(4) { animation-delay: 0.24s, 1.5s; }
-.slide-problems.active .problem-card:nth-child(5) { animation-delay: 0.3s, 2s; }
-.slide-problems.active .problem-card:nth-child(6) { animation-delay: 0.36s, 2.5s; }
-.slide-problems.active .problem-card:nth-child(7) { animation-delay: 0.42s, 3s; }
-.slide-problems.active .problem-card:nth-child(8) { animation-delay: 0.48s, 3.5s; }
 
 @keyframes problemGlow {
   0%, 100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
@@ -1036,16 +1103,156 @@ h1.title .ai {
 @media (max-width: 900px) {
   .problem-grid {
     grid-template-columns: 1fr;
-    max-width: 560px;
+    max-width: 700px;
   }
 
   .problem-card {
-    padding: 22px 20px;
+    padding: 24px 22px;
     min-height: auto;
   }
 }
 
-/* ===== SLIDE 4 — STRATEGIK MAQSAD ===== */
+.problems-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.problems-modal[hidden] {
+  display: none;
+}
+
+.problems-modal.is-open {
+  display: flex;
+}
+
+.problems-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.problems-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(94vw, 920px);
+  max-height: min(90vh, 780px);
+  overflow-y: auto;
+  padding: 32px 36px 28px;
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgba(20, 12, 28, 0.98) 0%, rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  animation: problemsModalIn 0.35s ease;
+}
+
+@keyframes problemsModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.problems-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.problems-modal-title {
+  margin: 0 44px 14px 0;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 800;
+  color: #fecaca;
+  line-height: 1.2;
+}
+
+.problems-modal-desc {
+  margin: 0 0 24px;
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.55;
+}
+
+.problems-modal-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.problems-modal-group {
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+.problems-modal-group h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #f87171;
+}
+
+.problems-modal-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.problems-modal-group li {
+  position: relative;
+  padding: 7px 0 7px 20px;
+  font-size: clamp(14px, 1.4vw, 17px);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.45;
+}
+
+.problems-modal-group li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f87171;
+}
+
+body.problems-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .problems-modal-groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== SLIDE 5 — STRATEGIK MAQSAD ===== */
 .slide-strategy {
   overflow: hidden;
   justify-content: center;
@@ -1087,9 +1294,9 @@ h1.title .ai {
   position: absolute;
   top: 50%;
   left: 38%;
-  width: min(68vmin, 72vh, 720px);
-  height: min(68vmin, 72vh, 720px);
-  margin: calc(min(68vmin, 72vh, 720px) / -2) 0 0 calc(min(68vmin, 72vh, 720px) / -2);
+  width: min(52vmin, 56vh, 520px);
+  height: min(52vmin, 56vh, 520px);
+  margin: calc(min(52vmin, 56vh, 520px) / -2) 0 0 calc(min(52vmin, 56vh, 520px) / -2);
   border: 1px solid rgba(139, 92, 246, 0.12);
   border-radius: 50%;
   animation: strategyRingSpin 40s linear infinite;
@@ -1143,8 +1350,8 @@ h1.title .ai {
 }
 
 .strategy-hub {
-  --hub-size: min(62vmin, 70vh, 640px);
-  --hub-orbit-r: calc(var(--hub-size) * 0.395);
+  --hub-size: min(46vmin, 52vh, 480px);
+  --hub-orbit-r: calc(var(--hub-size) * 0.39);
   position: relative;
   width: var(--hub-size);
   height: var(--hub-size);
@@ -1314,6 +1521,8 @@ h1.title .ai {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   min-width: 118px;
+  max-width: 160px;
+  flex: 0 0 auto;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -1325,15 +1534,23 @@ h1.title .ai {
 .flow-icon {
   width: 48px;
   height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .flow-icon svg {
   width: 26px;
   height: 26px;
+  max-width: 26px;
+  max-height: 26px;
+  flex-shrink: 0;
 }
 
 .flow-icon-1 { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
@@ -2269,6 +2486,12 @@ h1.title .ai {
   --ai-bg: linear-gradient(145deg, rgba(245, 158, 11, 0.38) 0%, rgba(217, 119, 6, 0.26) 50%, rgba(69, 26, 3, 0.55) 100%);
 }
 
+.slide-ai .ai-card--sky {
+  --ai-accent: #7dd3fc;
+  --ai-glow: rgba(14, 165, 233, 0.38);
+  --ai-bg: linear-gradient(145deg, rgba(14, 165, 233, 0.4) 0%, rgba(2, 132, 199, 0.26) 50%, rgba(12, 74, 110, 0.55) 100%);
+}
+
 .slide-ai.active .ai-card {
   animation: aiCardIn 0.45s ease forwards;
 }
@@ -2279,8 +2502,9 @@ h1.title .ai {
 .slide-ai.active .ai-group:first-child .ai-card:nth-child(4) { animation-delay: 0.2s; }
 .slide-ai.active .ai-group:first-child .ai-card:nth-child(5) { animation-delay: 0.25s; }
 .slide-ai.active .ai-group:first-child .ai-card:nth-child(6) { animation-delay: 0.3s; }
-.slide-ai.active .ai-group-app .ai-card:nth-child(1) { animation-delay: 0.35s; }
-.slide-ai.active .ai-group-app .ai-card:nth-child(2) { animation-delay: 0.4s; }
+.slide-ai.active .ai-group:first-child .ai-card:nth-child(7) { animation-delay: 0.35s; }
+.slide-ai.active .ai-group-app .ai-card:nth-child(1) { animation-delay: 0.4s; }
+.slide-ai.active .ai-group-app .ai-card:nth-child(2) { animation-delay: 0.45s; }
 
 @keyframes aiCardIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -2456,8 +2680,8 @@ h1.title .ai {
 .slide:not(.slide-hero):not(.slide-finale) > p[class*="-desc"],
 .slide:not(.slide-hero):not(.slide-finale) > .digit-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .eco-intro,
-.slide:not(.slide-hero):not(.slide-finale) > .didox-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .problems-intro,
+.slide:not(.slide-hero):not(.slide-finale) > .didox-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .strategy-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .dir-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .mgmt-intro,
@@ -2468,7 +2692,6 @@ h1.title .ai {
 .slide:not(.slide-hero):not(.slide-finale) > .demo-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .life-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .pay-intro,
-.slide:not(.slide-hero):not(.slide-finale) > .kredit-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .arch-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .sec-intro,
 .slide:not(.slide-hero):not(.slide-finale) > .team-intro,
